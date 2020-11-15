@@ -2,12 +2,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-
-from flask_security import Security, SQLAlchemyUserDatastore, \
-    UserMixin, RoleMixin, login_required
-
 
 
 app = Flask(__name__)
@@ -25,23 +21,14 @@ from esercizio_studenti_flask.view.home import home_bp
 from esercizio_studenti_flask.view.login import login_bp
 
 from esercizio_studenti_flask.view.logout import logout_bp
-from esercizio_studenti_flask.view.edit import edit
+from esercizio_studenti_flask.view.edit_student import edit_student
 
 app.register_blueprint(register)
 app.register_blueprint(home_bp)
 app.register_blueprint(login_bp)
 app.register_blueprint(logout_bp)
-app.register_blueprint(edit)
+app.register_blueprint(edit_student)
 
 
 
 
-
-
-
-
-from esercizio_studenti_flask.model import User, Role
-
-# Setup Flask-Security
-user_datastore = SQLAlchemyUserDatastore(db, User, Role)
-security = Security(app, user_datastore)

@@ -13,8 +13,8 @@
     </ul>
     <ul class="navbar-nav navbar-right">
         {% if current_user.is_authenticated %}
-            <li class="nav-item"><a class="nav-link" href=" {{ url_for('logout.logout') }}">Logout - {{ current_user.email }} | {{ current_user.roles }} </a></li>
-                {% else %}
+            <li class="nav-item"><a class="nav-link" href=" {{ url_for('logout.logout') }}">Logout</a></li>
+        {% else %}
             <li class="nav-item"><a class="nav-link" href=" {{ url_for('login.login') }}">Login</a></li>
         {% endif %}
     </ul>
@@ -36,7 +36,7 @@
 
             {% for student in students %}
                 <tr>
-                    <th> <a href="{{ url_for('edit.student', student_id = student.id) }}">{{ student.id }}</a></th>
+                    <th> <a href="{{ url_for('edit_student.student', student_id = student.id) }}">{{ student.id }}</a></th>
                     <td> {{ student.name }}</td>
                     <td> {{ student.lastname}}</td>
                     <td> {{ student.age }} </td>
@@ -46,31 +46,4 @@
         </tbody>
     </table>
 </div>
-
-
-
- <h2 class="mt-4 mb-4 border-bottom">Lista degli utenti</h2>
-<div class="table-responsive">
-    <table class="table table-striped table-dark table-bordered mt-4">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Email</th>
-                <th scope="col">Ruolo</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            {% for user in users %}
-                <tr>
-                    <th><a href="{{ url_for('edit.user', user_id = user.id) }}">{{ user.id }}</a></th>
-                    <td> {{ user.email }}</td>
-                    <td> {{ user.roles }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
-
-
 {% endblock %}

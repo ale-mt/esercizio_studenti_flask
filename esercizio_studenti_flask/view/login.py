@@ -1,7 +1,8 @@
 from flask import render_template, flash, redirect, url_for, request, Blueprint
 from esercizio_studenti_flask.forms import Loginform
 from esercizio_studenti_flask import bcrypt
-from flask_security import login_user
+from flask_login import login_user
+
 
 from esercizio_studenti_flask.model import User
 
@@ -13,10 +14,10 @@ login_bp = Blueprint('login', __name__, template_folder='../templates')
 def login():
     form = Loginform()
     if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data).first()
+        user = User.query.filter_by(name=form.name.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user)
-            flash(f'You logged in as {user.email}!', 'success')
+            flash(f'You logged in as {user.name}!', 'success')
             next_page = request.args.get('next')
             return redirect(next_page) if next_page else redirect(url_for('home.home'))
         else:

@@ -1,5 +1,5 @@
 from flask import flash, redirect, url_for, Blueprint
-from flask_security import login_required, logout_user
+from flask_login import login_required, logout_user
 
 logout_bp = Blueprint('logout', __name__)
 
