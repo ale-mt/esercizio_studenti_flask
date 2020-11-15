@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+
     {% block active_nav %}
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -13,36 +14,50 @@
     </ul>
     <ul class="navbar-nav navbar-right">
         {% if current_user.is_authenticated %}
-            <li class="nav-item"><a class="nav-link" href=" {{ url_for('logout.logout') }}">Logout - {{ current_user.email }} | {{ current_user.roles }} </a></li>
+           <li class="nav-item"><a class="nav-link" href=" {{ url_for('logout.logout') }}">Logout - {{ current_user.email }} | {{ current_user.roles }} </a></li>
                 {% else %}
 
-            <li class="nav-item active"><a class="nav-link" href=" {{ url_for('login.login') }}">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href=" {{ url_for('login.login') }}">Login</a></li>
         {% endif %}
     </ul>
     {% endblock %}
 
 {% block content %}
-    <h2 class="mt-4 border-bottom">Log in your account</h2>
+
+    <h2 class="mt-4 border-bottom">Manage an admin</h2>
     <form method="post" action="" class="mt-4 mb-4">
         {{ form.hidden_tag() }}
-         <div class="form-group">
+        <div class="form-group">
             {{ form.email.label(class='form-control-label') }}
+
             {% if form.email.errors %}
                 {{ form.email(class='form-control form-control-lg is-invalid') }}
                 <div class="invalid-feedback">
-                    {% for error in form.email.errors %}
+                    {% for error in form.email.errors%}
                         <span> {{ error }} </span>
                     {% endfor %}
                 </div>
             {% else %}
-                {{ form.email(class='form-control form-control-lg') }}
-            {% endif %}
+                {{ form.email(class='form-control form-control-lg', value=user.email) }}
+            {% endif%}
         </div>
         <div class="form-group">
-            {{ form.password.label(class='form-control-label') }}
-            {{ form.password(class='form-control form-control-lg') }}
-        </div>
-            {{ form.submit(class='btn btn-primary') }}
-    </form>
+            <div class="form-check">
+                {{ form.admin.label(class='form-check-label mr-4') }}
+                {{ form.admin(class='form-check-input') }}
+            </div>
 
+            <div class="form-check">
+                {{ form.moderatore.label(class='form-check-label mr-4') }}
+                {{ form.moderatore(class='form-check-input') }}
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            {{ form.id(class='form-control form-control-lg', hidden=true, readonly=true, value=user.id) }}
+        </div>
+            {{ form.edit(class='btn btn-outline-primary') }}
+            {{ form.delete(class='btn btn-outline-danger') }}
+    </form>
 {% endblock %}

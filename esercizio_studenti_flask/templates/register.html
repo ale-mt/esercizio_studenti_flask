@@ -10,8 +10,8 @@
     </ul>
     <ul class="navbar-nav navbar-right">
         {% if current_user.is_authenticated %}
-            <li class="nav-item"><a class="nav-link" href=" {{ url_for('logout.logout') }}">Logout</a></li>
-        {% else %}
+           <li class="nav-item"><a class="nav-link" href=" {{ url_for('logout.logout') }}">Logout - {{ current_user.email }} | {{ current_user.roles }} </a></li>
+                {% else %}
             <li class="nav-item"><a class="nav-link" href=" {{ url_for('login.login') }}">Login</a></li>
         {% endif %}
     </ul>
@@ -22,17 +22,29 @@
     <form method="post" action="" class="mt-4 mb-4">
         {{ form.hidden_tag() }}
         <div class="form-group">
-            {{ form.name.label(class='form-control-label') }}
-            {% if form.name.errors %}
-                {{ form.name(class='form-control form-control-lg is-invalid') }}
+            {{ form.email.label(class='form-control-label') }}
+            {% if form.email.errors %}
+                {{ form.email(class='form-control form-control-lg is-invalid') }}
                 <div class="invalid-feedback">
-                    {% for error in form.name.errors %}
+                    {% for error in form.email.errors %}
                         <span> {{ error }} </span>
                     {% endfor %}
                 </div>
             {% else %}
-                {{ form.name(class='form-control form-control-lg') }}
+                {{ form.email(class='form-control form-control-lg') }}
             {% endif %}
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                {{ form.admin.label(class='form-check-label mr-4') }}
+                {{ form.admin(class='form-check-input') }}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                {{ form.moderatore.label(class='form-check-label mr-4') }}
+                {{ form.moderatore(class='form-check-input') }}
+            </div>
         </div>
         <div class="form-group">
             {{ form.password.label(class='form-control-label') }}
