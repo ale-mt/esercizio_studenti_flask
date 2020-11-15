@@ -11,7 +11,7 @@ from flask_security import Security, SQLAlchemyUserDatastore, \
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///esercizio_studenti.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:merlino@localhost:4000/flask_mysql'
 app.config['SECRET_KEY'] = '2e5d0b485deec8c0b7e530611f7b492a'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)

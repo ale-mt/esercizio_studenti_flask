@@ -23,9 +23,6 @@ class Loginform(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField()
 
-    def validate_email(self, email):
-        if email.data == 'admin@admin.com':
-            raise ValidationError('Email di admin non accettata')
 
 ROLES = [('admin', 'admin'), ('moderatore', 'moderatore'), ('nessuno', 'nessuno')] # value, label
 
