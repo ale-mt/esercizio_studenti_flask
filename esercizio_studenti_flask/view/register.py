@@ -60,31 +60,31 @@ def student(id=None):
 
     student = Student.query.filter_by(id=id).first()
 
-# if request.method == "POST":
-    if form.edit.data and form.validate():
-        print("dentro edit")
-        student = Student.query.filter_by(id=form.id.data).first()
-        student.name = form.name.data
-        student.lastname = form.lastname.data
-        student.age = form.age.data
-        student.email = form.email.data
-        db.session.commit()
-        flash(f'Student {student.email} {student.lastname} edited!', 'success')
-        return redirect(url_for('home.home'))
+    if request.method == "POST":
+        if form.edit.data and form.validate():
+            print("dentro edit")
+            student = Student.query.filter_by(id=form.id.data).first()
+            student.name = form.name.data
+            student.lastname = form.lastname.data
+            student.age = form.age.data
+            student.email = form.email.data
+            db.session.commit()
+            flash(f'Student {student.email} {student.lastname} edited!', 'success')
+            return redirect(url_for('home.home'))
 
-    if form.submit.data and form.validate_on_submit():
-        print("dentro submit")
-        student = Student(name=form.name.data, lastname=form.lastname.data, age=form.age.data, email=form.email.data)
-        db.session.add(student)
-        db.session.commit()
-        flash(f'Student {student.name} {student.lastname} added!', 'success')
-        return redirect(url_for('home.home'))
+        if form.submit.data and form.validate_on_submit():
+            print("dentro submit")
+            student = Student(name=form.name.data, lastname=form.lastname.data, age=form.age.data, email=form.email.data)
+            db.session.add(student)
+            db.session.commit()
+            flash(f'Student {student.name} {student.lastname} added!', 'success')
+            return redirect(url_for('home.home'))
 
-    if form.delete.data and form.validate_on_submit():
-        student = Student.query.filter_by(id=form.id.data).first()
-        db.session.delete(student)
-        db.session.commit()
-        flash(f'Student {student.name} {student.lastname} Removed!', 'success')
-        return redirect(url_for('home.home'))
-# if request.method == "GET":
-    return render_template('insert_student.html', title='Register', form=form, student=student, student_id=id)
+        if form.delete.data and form.validate_on_submit():
+            student = Student.query.filter_by(id=form.id.data).first()
+            db.session.delete(student)
+            db.session.commit()
+            flash(f'Student {student.name} {student.lastname} Removed!', 'success')
+            return redirect(url_for('home.home'))
+    if request.method == "GET":
+        return render_template('insert_student.html', title='Register', form=form, student=student, student_id=id)
