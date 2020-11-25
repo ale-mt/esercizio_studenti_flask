@@ -48,6 +48,7 @@ def admin():
 def student(id=None):
     form = DeleteStudentForm()
 
+
     list_of_id = [(-1, 'No')]
     for student in Student.query.all():
         tupla = (student.id, f'Modifica studente con ID: {student.id}')
@@ -57,7 +58,10 @@ def student(id=None):
 
     form.id.choices = list_of_id
 
-    if form.edit.data and form.validate_on_submit():
+    student = Student.query.filter_by(id=id).first()
+
+# if request.method == "POST":
+    if form.edit.data and form.validate():
         print("dentro edit")
         student = Student.query.filter_by(id=form.id.data).first()
         student.name = form.name.data
@@ -82,5 +86,5 @@ def student(id=None):
         db.session.commit()
         flash(f'Student {student.name} {student.lastname} Removed!', 'success')
         return redirect(url_for('home.home'))
-
-    return render_template('insert_student.html', title='Register', form=form, student_id=id)
+# if request.method == "GET":
+    return render_template('insert_student.html', title='Register', form=form, student=student, student_id=id)
