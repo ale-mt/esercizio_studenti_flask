@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
     {% block active_nav %}
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href=" {{ url_for('home.home') }}">Home</a>
         </li>
         {% if current_user.is_authenticated %}
@@ -9,7 +9,7 @@
                 <a class="nav-link" href=" {{ url_for('register.student') }}">Insert a Student</a>
             </li>
             <li class="nav-item"><a class="nav-link" href=" {{ url_for('register.admin') }}">Register an account</a></li>
-            <li class="nav-item"><a class="nav-link" href=" {{ url_for('manage.manage') }}">Advanced management</a></li>
+            <li class="nav-item active"><a class="nav-link" href=" {{ url_for('manage.manage') }}">Advanced management</a></li>
         {% endif %}
     </ul>
     <ul class="navbar-nav navbar-right">
@@ -21,7 +21,7 @@
     </ul>
     {% endblock %}
 {% block content %}
-    <h2 class="mt-4 mb-4 border-bottom">Lista degli studenti</h2>
+    <h2 class="mt-4 mb-4 border-bottom">Gestione avanzata degli studenti</h2>
 <div class="table-responsive">
     <table class="table table-striped table-dark table-bordered mt-4">
         <thead>
@@ -42,38 +42,11 @@
                     <td> {{ student.lastname}}</td>
                     <td> {{ student.age }} </td>
                     <td> {{ student.email }} </td>
+                    <td><button class="btn btn-primary updateButton" student_id="{{ student.id }}">Delete</button></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
-
-
-
- <h2 class="mt-4 mb-4 border-bottom">Lista degli utenti</h2>
-<div class="table-responsive">
-    <table class="table table-striped table-dark table-bordered mt-4">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Email</th>
-                <th scope="col">Ruolo</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            {% for user in users %}
-                <tr>
-                    <th><a href="{{ url_for('edit.user', user_id = user.id) }}">{{ user.id }}</a></th>
-                    <td> {{ user.email }}</td>
-                    <td> {{ user.roles }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
-<script src="{{ url_for('static', filename='display.js') }}"></script>
-
-
 
 {% endblock %}

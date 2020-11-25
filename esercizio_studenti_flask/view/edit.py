@@ -20,10 +20,10 @@ def student(student_id=None):
         return redirect(url_for('home.home'))
 
     if form.validate_on_submit():
-        student.email = form.name.data
+        student.email = form.email.data
         student.lastname = form.lastname.data
         student.age = form.age.data
-        student.email = form.email.data
+        student.name = form.name.data
         db.session.commit()
         flash(f'Student {student.email} {student.lastname} edited!', 'success')
         return redirect(url_for('home.home'))

@@ -1,5 +1,5 @@
 from flask import render_template, flash, redirect, url_for, Blueprint, request
-from esercizio_studenti_flask.forms import RegisterForm, RegisterStudentForm, ROLES
+from esercizio_studenti_flask.forms import RegisterForm, DeleteStudentForm, RegisterStudentForm, ROLES
 from esercizio_studenti_flask.model import Student, User, Role
 from esercizio_studenti_flask import bcrypt, db
 from flask_security import login_required, roles_accepted
@@ -42,14 +42,45 @@ def admin():
     return render_template('register.html', title='Register', form=form)
 
 
-@register.route('/student', methods=['POST', 'GET'])
+@register.route('/student', defaults={"id": None})
+@register.route('/student/<int:id>', methods=['POST', 'GET'])
 @roles_accepted('admin', 'moderatore')
-def student():
-    form = RegisterStudentForm()
-    if form.validate_on_submit():
+def student(id=None):
+    form = DeleteStudentForm()
+
+    list_of_id = [(-1, 'No')]
+    for student in Student.query.all():
+        tupla = (student.id, f'Modifica studente con ID: {student.id}')
+        list_of_id.append(tupla)
+
+    print(list_of_id)
+
+    form.id.choices = list_of_id
+
+    if form.edit.data and form.validate_on_submit():
+        print("dentro edit")
+        student = Student.query.filter_by(id=form.id.data).first()
+        student.name = form.name.data
+        student.lastname = form.lastname.data
+        student.age = form.age.data
+        student.email = form.email.data
+        db.session.commit()
+        flash(f'Student {student.email} {student.lastname} edited!', 'success')
+        return redirect(url_for('home.home'))
+
+    if form.submit.data and form.validate_on_submit():
+        print("dentro submit")
         student = Student(name=form.name.data, lastname=form.lastname.data, age=form.age.data, email=form.email.data)
         db.session.add(student)
         db.session.commit()
         flash(f'Student {student.name} {student.lastname} added!', 'success')
         return redirect(url_for('home.home'))
-    return render_template('insert_student.html', title='Register', form=form)
+
+    if form.delete.data and form.validate_on_submit():
+        student = Student.query.filter_by(id=form.id.data).first()
+        db.session.delete(student)
+        db.session.commit()
+        flash(f'Student {student.name} {student.lastname} Removed!', 'success')
+        return redirect(url_for('home.home'))
+
+    return render_template('insert_student.html', title='Register', form=form, student_id=id)
