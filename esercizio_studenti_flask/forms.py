@@ -52,9 +52,11 @@ class DeleteStudentForm(FlaskForm):     # form per delete e edit di student
     delete = SubmitField('Delete', validators=[Optional()])
 
     def validate_id(self, id):
-        if id.data < 1:
-            if not self.submit.data:
-                raise ValidationError("Id non valido")
+        if id.data:
+            print(id.data)
+            if id.data < 1:
+                if not self.submit.data:
+                    raise ValidationError("Id non valido")
 
     def validate_email(self, email):
         student_bymail = Student.query.filter_by(email=email.data).first()

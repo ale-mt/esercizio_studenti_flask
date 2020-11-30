@@ -37,7 +37,7 @@
 
             {% for student in students %}
                 <tr class="memberSection{{ student.id }}">
-                    <th> <a href="{{ url_for('register.student', id = student.id) }}">{{ student.id }}</a></th>
+                    <th> <a href="{{ url_for('register.student', id=student.id) }}">{{ student.id }}</a></th>
                     <td> {{ student.name }}</td>
                     <td> {{ student.lastname}}</td>
                     <td> {{ student.age }} </td>
