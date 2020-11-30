@@ -46,21 +46,19 @@ def admin():
 @register.route('/student/<int:id>', methods=['POST', 'GET'])
 @roles_accepted('admin', 'moderatore')
 def student(id=None):
-    form = DeleteStudentForm()
-
-
-    list_of_id = [(-1, 'No')]
-    for student in Student.query.all():
-        tupla = (student.id, f'Modifica studente con ID: {student.id}')
-        list_of_id.append(tupla)
-
-    print(list_of_id)
-
-    form.id.choices = list_of_id
-
-    student = Student.query.filter_by(id=id).first()
-
     if request.method == "POST":
+        form = DeleteStudentForm()
+        list_of_id = [(-1, 'No')]
+        for student in Student.query.all():
+            tupla = (student.id, f'Modifica studente con ID: {student.id}')
+            list_of_id.append(tupla)
+
+        print(list_of_id)
+
+        form.id.choices = list_of_id
+
+        student = Student.query.filter_by(id=id).first()
+
         if form.edit.data and form.validate():
             print("dentro edit")
             student = Student.query.filter_by(id=form.id.data).first()
@@ -86,5 +84,17 @@ def student(id=None):
             db.session.commit()
             flash(f'Student {student.name} {student.lastname} Removed!', 'success')
             return redirect(url_for('home.home'))
+
     if request.method == "GET":
+
+        form = DeleteStudentForm()
+        list_of_id = [(-1, 'No')]
+        for student in Student.query.all():
+            tupla = (student.id, f'Modifica studente con ID: {student.id}')
+            list_of_id.append(tupla)
+
+        print(list_of_id)
+
+        form.id.choices = list_of_id
+        student = Student.query.filter_by(id=id).first()
         return render_template('insert_student.html', title='Register', form=form, student=student, student_id=id)
