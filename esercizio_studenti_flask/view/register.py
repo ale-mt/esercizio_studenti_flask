@@ -42,12 +42,13 @@ def admin():
     return render_template('register.html', title='Register', form=form)
 
 
-@register.route('/student', defaults={"id": None})
+@register.route('/student', defaults={"id": None}, methods=['POST', 'GET'])
 @register.route('/student/<int:id>', methods=['POST', 'GET'])
 @roles_accepted('admin', 'moderatore')
 def student(id=None):
     if request.method == "POST":
         form = DeleteStudentForm()
+        form_register = RegisterStudentForm()
         list_of_id = [(-1, 'No')]
         for student in Student.query.all():
             tupla = (student.id, f'Modifica studente con ID: {student.id}')
@@ -70,7 +71,7 @@ def student(id=None):
             flash(f'Student {student.email} {student.lastname} edited!', 'success')
             return redirect(url_for('home.home'))
 
-        if form.submit.data and form.validate_on_submit():
+        if form_register.submit.data and form_register.validate_on_submit():
             print("dentro submit")
             student = Student(name=form.name.data, lastname=form.lastname.data, age=form.age.data, email=form.email.data)
             db.session.add(student)
