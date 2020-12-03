@@ -1,4 +1,11 @@
 {% extends 'layout.html' %}
+
+    {% block head %}
+        <script>
+            var errore = '{{ error }}';
+        </script>
+    {% endblock %}
+
     {% block active_nav %}
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -27,93 +34,7 @@
     {% else %}
         <h2 class="mt-4 border-bottom">Insert a Student</h2>
     {% endif %}
+    <div id="container-form"></div>
 
-
-    <form method="post" action="" class="mt-4 mb-4">
-        {{ form.hidden_tag() }}
-
-        {% if student_id %}
-
-            <div class="form-group">
-            {% if form.id.errors %}
-                {{ form.id(class='form-control form-control-lg is-invalid check_students') }}
-                <div class="invalid-feedback">
-                    {% for error in form.id.errors%}
-                        <span> {{ error }} </span>
-                    {% endfor %}
-                </div>
-            {% else %}
-
-                {% set z = form.id.process_data(student.id) %}
-                {{ form.id(class='form-control form-control-lg check_students') }}
-            {% endif%}
-            </div>
-
-        {% endif %}
-
-
-
-        <div class="form-group">
-            {{ form.name.label(class='form-control-label') }}
-
-            {% if form.name.errors %}
-                {{ form.name(class='form-control form-control-lg is-invalid') }}
-                <div class="invalid-feedback">
-                    {% for error in form.name.errors%}
-                        <span> {{ error }} </span>
-                    {% endfor %}
-                </div>
-            {% else %}
-                {{ form.name(class='form-control form-control-lg', value=student.name) }}
-            {% endif%}
-
-        </div>
-        <div class="form-group">
-            {{ form.lastname.label(class='form-control-label') }}
-            {% if form.lastname.errors %}
-                {{ form.lastname(class='form-control form-control-lg is-invalid') }}
-                <div class="invalid-feedback">
-                    {% for error in form.lastname.errors%}
-                        <span> {{ error }} </span>
-                    {% endfor %}
-                </div>
-            {% else %}
-                {{ form.lastname(class='form-control form-control-lg', value=student.lastname) }}
-            {% endif%}
-        </div>
-        <div class="form-group">
-            {{ form.age.label(class='form-control-label') }}
-            {% if form.age.errors %}
-                {{ form.age(class='form-control form-control-lg is-invalid') }}
-                <div class="invalid-feedback">
-                    {% for error in form.age.errors%}
-                        <span> {{ error }} </span>
-                    {% endfor %}
-                </div>
-            {% else %}
-                {{ form.age(class='form-control form-control-lg', value=student.age) }}
-            {% endif%}
-        </div>
-        <div class="form-group">
-            {{ form.email.label(class='form-control-label') }}
-            {% if form.email.errors %}
-                {{ form.email(class='form-control form-control-lg is-invalid') }}
-                <div class="invalid-feedback">
-                    {% for error in form.email.errors%}
-                        <span> {{ error }} </span>
-                    {% endfor %}
-                </div>
-            {% else %}
-                {{ form.email(class='form-control form-control-lg', value=student.email) }}
-            {% endif%}
-        </div>
-            {% if not student_id %}
-                {{ form.submit(class='btn btn-primary') }}
-            {% endif %}
-
-            {% if student_id %}
-                {{ form.edit(class='btn btn-info') }}
-                {{ form.delete(class='btn btn-danger') }}
-            {% endif %}
-    </form>
 {% endblock %}
+{% block script %} <script src="{{ url_for('static', filename='load_form.js') }}"></script> {% endblock %}

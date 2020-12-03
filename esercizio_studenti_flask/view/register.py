@@ -1,8 +1,10 @@
-from flask import render_template, flash, redirect, url_for, Blueprint, request
+from flask import render_template, flash, redirect, url_for, Blueprint, request, jsonify
 from esercizio_studenti_flask.forms import RegisterForm, DeleteStudentForm, RegisterStudentForm, ROLES
 from esercizio_studenti_flask.model import Student, User, Role
 from esercizio_studenti_flask import bcrypt, db
 from flask_security import login_required, roles_accepted
+from customException import FormValidation
+import json
 
 register = Blueprint('register', __name__, template_folder='../templates', url_prefix='/register')
 
@@ -42,60 +44,142 @@ def admin():
     return render_template('register.html', title='Register', form=form)
 
 
-@register.route('/student', defaults={"id": None}, methods=['POST', 'GET'])
-@register.route('/student/<int:id>', methods=['POST', 'GET'])
+@register.route('/student', methods=['POST', 'GET'])
 @roles_accepted('admin', 'moderatore')
-def student(id=None):
+def student():
+
     if request.method == "POST":
-        form = DeleteStudentForm()
-        form_register = RegisterStudentForm()
-        list_of_id = [(-1, 'No')]
-        for student in Student.query.all():
-            tupla = (student.id, f'Modifica studente con ID: {student.id}')
-            list_of_id.append(tupla)
+        print("post request")
+        student_dict = request.get_json()
+        print(student_dict)
+        action = student_dict['action']
+        print(action)
 
-        print(list_of_id)
+        def validate():
 
-        form.id.choices = list_of_id
+            def validate_email():
+                student_bymail = Student.query.filter_by(email=student_dict.get('email')).first()
+                print(f'student by mail {student_bymail}')
+                student_byid = Student.query.filter_by(id=student_dict.get('id')).first()
+                print(f'student by id {student_byid}')
+                if student_bymail and student_byid:
+                    if not student_bymail.email == student_byid.email:
+                        msg = "Email in uso da un altro studente"
+                        target_list = ['email']
+                        raise FormValidation(error=msg, target=target_list)
+                elif student_dict['action'] == 'submit':
+                    if student_bymail:
+                        msg = "Email in uso da un altro studente"
+                        target_list = ['email']
+                        raise FormValidation(error=msg, target=target_list)
+                else:
+                    return True
 
-        student = Student.query.filter_by(id=id).first()
+            # nessun campo deve essere vuoto
+            if student_dict['name'] and student_dict['lastname'] and student_dict['age'] and student_dict['email']:
+                validate_email()
+                if int(student_dict['age']) < 18:
+                    msg = "Eta' non valida"
+                    print(msg)
+                    raise FormValidation(error=msg, target=['age'])
+                else:
+                    print("validato")
+                    return True
+            else:
+                msg = "Campo vuoto"
+                print(msg)
+                target_list = []
+                for key in student_dict:
+                    if not student_dict[key]:
+                        target_list.append(key) # lista dei campi vuoti da segnalare
 
-        if form.edit.data and form.validate():
-            print("dentro edit")
-            student = Student.query.filter_by(id=form.id.data).first()
-            student.name = form.name.data
-            student.lastname = form.lastname.data
-            student.age = form.age.data
-            student.email = form.email.data
-            db.session.commit()
-            flash(f'Student {student.email} {student.lastname} edited!', 'success')
-            return redirect(url_for('home.home'))
+                raise FormValidation(error=msg, target=target_list)
 
-        if form_register.submit.data and form_register.validate_on_submit():
+        if student_dict["action"] == "edit":
+            print("ricevuta richiesta di edit")
+            try:
+                validate()
+            except FormValidation as err:
+                return jsonify(error=err.error, target=err.target)
+            else:
+                student = Student.query.filter_by(id=student_dict['id']).first()
+                student.name = student_dict['name']
+                student.lastname = student_dict['lastname']
+                student.age = student_dict['age']
+                student.email = student_dict['email']
+                db.session.commit()
+                flash(f'Student {student.email} {student.lastname} edited!', 'success')
+                return jsonify({"redirect": '/home'})
+
+        if student_dict['action'] == 'submit':
             print("dentro submit")
-            student = Student(name=form.name.data, lastname=form.lastname.data, age=form.age.data, email=form.email.data)
-            db.session.add(student)
-            db.session.commit()
-            flash(f'Student {student.name} {student.lastname} added!', 'success')
-            return redirect(url_for('home.home'))
+            try:
+                validate()
+            except FormValidation as err:
+                return jsonify(error=err.error, target=err.target)
+            else:
+                student = Student(name=student_dict['name'], lastname=student_dict['lastname'], age=student_dict['age'], email=student_dict['email'])
+                db.session.add(student)
+                db.session.commit()
+                flash(f'Student {student.name} {student.lastname} added!', 'success')
+                return jsonify({"redirect": '/home'})
 
-        if form.delete.data and form.validate_on_submit():
-            student = Student.query.filter_by(id=form.id.data).first()
-            db.session.delete(student)
-            db.session.commit()
-            flash(f'Student {student.name} {student.lastname} Removed!', 'success')
-            return redirect(url_for('home.home'))
+        if student_dict['action'] == 'delete':
+            print("ricevuta richiesta di delete")
+
+            # verifica che form abbia fornito id e che esista tra quelli creati
+            id_list = [s.id for s in Student.query.all()]
+            print(id_list)
+            print(student_dict.get('id'))
+            if int(student_dict.get('id')) in id_list:
+                print("trovato id per studnete")
+                student = Student.query.filter_by(id=student_dict['id']).first()
+                print(f"studente da cancellare: {student}")
+                db.session.delete(student)
+                db.session.commit()
+                flash(f'Student {student.name} {student.lastname}, {student.email} - {student.id} Removed!', 'success')
+                return jsonify({"redirect": '/home'})
 
     if request.method == "GET":
-
+        id = request.args.get('id')
+        student = Student.query.filter(Student.id == id).first()
         form = DeleteStudentForm()
-        list_of_id = [(-1, 'No')]
-        for student in Student.query.all():
-            tupla = (student.id, f'Modifica studente con ID: {student.id}')
-            list_of_id.append(tupla)
 
-        print(list_of_id)
-
-        form.id.choices = list_of_id
-        student = Student.query.filter_by(id=id).first()
         return render_template('insert_student.html', title='Register', form=form, student=student, student_id=id)
+
+
+@register.route("/getdata/<int:id>", methods=['GET'])
+@roles_accepted('admin', 'moderatore')
+def getdata(id):
+    print("ricevuta richiesta di dati (getdata)")
+    if request.method == "GET":
+
+        id_list = [s.id for s in Student.query.all()]
+
+        print(id_list)
+        student = Student.query.filter_by(id=id).first()
+        if id:
+            student_dict = {
+                "name": student.name,
+                "lastname": student.lastname,
+                "age": student.age,
+                "email": student.email,
+                "id": student.id
+            }
+
+            print(f"ricevuto id: {id}")
+            print(f"student json: {student_dict}")
+        return jsonify(studente=student_dict, lista_id=id_list)
+
+
+@register.route('/update_insert', methods=['POST'])
+def update_insert():
+
+    student = Student.query.filter_by(id=request.form.get('id')).first()
+    name = student.name
+    lastname = student.lastname
+    age = student.age
+    email = student.email
+    id = student.id
+
+    return jsonify(name=name, lastname=lastname, age=age, email=email, id=id)
