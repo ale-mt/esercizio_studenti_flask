@@ -44,8 +44,8 @@ security = Security(app, user_datastore)
 def update():
     student = Student.query.filter_by(id=request.form['id']).first()
     print('dentro update')
-    # db.session.delete(student)
-    # db.session.commit()
+    db.session.delete(student)
+    db.session.commit()
     return jsonify(student_id=student.id, student_name=student.name)
 
 
@@ -53,17 +53,4 @@ def update():
 def display():
     student = Student.query.first()
     return student.name
-
-
-@app.route('/update_insert', methods=['POST'])
-def update_insert():
-
-    student = Student.query.filter_by(id=request.form.get('id')).first()
-    name = student.name
-    lastname = student.lastname
-    age = student.age
-    email = student.email
-    id = student.id
-
-    return jsonify(name=name, lastname=lastname, age=age, email=email, id=id)
 

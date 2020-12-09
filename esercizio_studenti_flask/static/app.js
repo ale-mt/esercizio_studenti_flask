@@ -17,23 +17,4 @@ $(document).ready(function() {
         });
     });
 
-
-    $('.check_students').change(function() {
-
-        var student_id = $(this).val();
-        console.log(student_id)
-        req = $.ajax({
-            url : '/update_insert',
-            type : 'POST',
-            data : { id : student_id }
-        });
-
-        req.done(function(data) {
-            console.log(data)
-            $("input[name='email']").val(data['email'])
-            $("input[name='name']").val(data['name'])
-            $("input[name='lastname']").val(data['lastname'])
-            $("input[name='age']").val(data['age'])
-        });
-    });
 });
