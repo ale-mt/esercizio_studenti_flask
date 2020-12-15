@@ -21,14 +21,12 @@ from esercizio_studenti_flask.view.register import register
 from esercizio_studenti_flask.view.home import home_bp
 from esercizio_studenti_flask.view.login import login_bp
 from esercizio_studenti_flask.view.logout import logout_bp
-from esercizio_studenti_flask.view.edit import edit
 from esercizio_studenti_flask.view.manage import manage_bp
 
 app.register_blueprint(register)
 app.register_blueprint(home_bp)
 app.register_blueprint(login_bp)
 app.register_blueprint(logout_bp)
-app.register_blueprint(edit)
 app.register_blueprint(manage_bp)
 
 
