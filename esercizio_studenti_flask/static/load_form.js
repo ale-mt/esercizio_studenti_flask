@@ -17,21 +17,21 @@ $(document).ready(function() {
     Name.setAttribute("type", "text");
     Name.setAttribute("name", "name");
     Name.setAttribute("placeholder", "Nome");
-    Name.required = true;
+
 
     var Lastname = document.createElement("input");
     Lastname.className = "form-control form-control-lg my-1"
     Lastname.setAttribute("type", "text");
     Lastname.setAttribute("name", "lastname");
     Lastname.setAttribute("placeholder", "Cognome");
-    Lastname.required = true;
+
 
     var Email = document.createElement("input");
     Email.className = "form-control form-control-lg my-1"
     Email.setAttribute("type", "email");
     Email.setAttribute("name", "email");
     Email.setAttribute("placeholder", "email@email.email");
-    Email.required = true;
+
 
     // div di invalid-feedback per ogni <input>
     var Invalid_feedback_name = document.createElement('div')

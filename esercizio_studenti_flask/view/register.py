@@ -10,17 +10,17 @@ import re
 register = Blueprint('register', __name__, template_folder='../templates', url_prefix='/register')
 
 
-# Make a regular expression
-# for validating an Email
+# regex per mail
 regex = '^[a-zA-Z0-9]+[\._]?[a-zA-Z0-9]+[@]\w+[.]\w{2,3}$'
 # for custom mails use: '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w+$'
 
 
 def check(email):
     if re.search(regex, email):
-        print("Valid Email")
+        print("Regex Valid Email")
+        return True
     else:
-        print("Invalid Email")
+        print("Regex Invalid Email")
         raise FormValidation(error='Email non valida', target=['email'])
 
 
@@ -64,39 +64,146 @@ def validate(student_dict):
         raise FormValidation(error=msg, target=target_list)
 
 
+def validate_user(user_dict):
+    def validate_email():
+        check(user_dict.get('email'))
+        user_bymail = User.query.filter_by(email=user_dict.get('email')).first()
+        print(f'user by mail {user_bymail}')
+        if user_bymail:
+            msg = "Email in uso da un altro utente"
+            target_list = ['email']
+            raise FormValidation(error=msg, target=target_list)
+        else:
+            return True
+
+    # nessun campo deve essere vuoto
+    if user_dict['email'] and user_dict['password'] and user_dict['confirm_password']:
+        validate_email()
+
+        if user_dict['password'] == user_dict['confirm_password']:
+            print("validato")
+            return True
+        else:
+            msg = "Le password non corrispondono"
+            target_list = ['password', 'confirm_password']
+            print(msg)
+            raise FormValidation(error=msg, target=target_list)
+    else:
+        msg = "Campo vuoto"
+        print(msg)
+        target_list = []
+        for key in user_dict:
+            if not user_dict[key]:
+                target_list.append(key)  # lista dei campi vuoti da segnalare
+
+        raise FormValidation(error=msg, target=target_list)
+
+
 @register.route('/admin', methods=['POST', 'GET'])
 @roles_accepted('admin', 'moderatore')
 def admin():
-    form = RegisterForm()
+    if request.method == "POST":
+        print("post request")
+        user_dict = request.get_json()
+        action = user_dict['action']
+        print(user_dict)
+        print(action)
 
-    if form.validate_on_submit():
-        role = Role.query.filter_by(name='admin').first()
-        role_2 = Role.query.filter_by(name='moderatore').first()
+        if user_dict['action'] == 'edit':
+            print("dentro edit")
+            try:
+                email = user_dict["email"]
+                if email and check(user_dict.get('email')):
+                    print("email passed regex")
+                else:
+                    raise FormValidation(error="Mail non valida", target=['email'])
 
-        # role_chose = dict(ROLES).get(form.pick_role.data)
+                user_bymail = User.query.filter_by(email=user_dict.get('email')).first()
+                user_byid = User.query.filter_by(id=user_dict.get('id')).first()
+                print(f'user by mail {user_bymail}')
+                print(f'user by id {user_byid}')
+                if user_bymail and user_byid:
+                    if not (user_bymail.email == user_byid.email):
+                        msg = "Email in uso da un altro utente"
+                        target_list = ['email']
+                        raise FormValidation(error=msg, target=target_list)
 
-        hashed_psw = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-        user = User(email=form.email.data, password=hashed_psw)
+            except FormValidation as err:
+                return jsonify(error=err.error, target=err.target)
+            else:
+                user = User.query.filter_by(id=user_dict.get('id')).first()
 
-        if form.admin.data:
-            if not role:
-                role = Role(name='admin', description='admin')
+                user.email = email
 
-            user.roles.append(role)
+                role_admin = Role.query.filter_by(name='admin').first()
+                role_mod = Role.query.filter_by(name='moderatore').first()
 
-        if form.moderatore.data:
-            if not role_2:
-                role_2 = Role(name='moderatore', description='moderatore')
+                if not role_admin:  # il record admin esiste gia' nella tabella dei ruoli?
+                    role_admin = Role(name='admin', description='admin')
 
-            user.roles.append(role_2)
+                if user_dict["admin"]:  # inviata richiesta di diventare admin?
+                    if 'admin' not in user.roles:   # l'utente e' gia' admin?
+                        user.roles.append(role_admin)
+                else:
+                    if 'admin' in user.roles:  # l'utente non e' gia' admin?
+                        user.roles.remove(role_admin)
 
-        db.session.add(user)
-        db.session.commit()
-        flash(f'User {user.email} added', 'success')
-        return redirect(url_for('home.home'))
-    else:
-        print(form.errors)
-    return render_template('register.html', title='Register', form=form)
+                if not role_mod:  # il record moderatore esiste gia' nella tabella dei ruoli?
+                    role_mod = Role(name='moderatore', description='moderatore')
+
+                if user_dict["moderatore"]:  # inviata richiesta di diventare moderatore?
+                    if 'moderatore' not in user.roles:  # l'utente non e' gia' moderatore?
+                        user.roles.append(role_mod)
+                else:
+                    if 'moderatore' in user.roles:  # l'utente non e' gia' moderatore?
+                        user.roles.remove(role_mod)
+
+                db.session.commit()
+                flash(f'User {user.email} edited', 'success')
+                return jsonify({"redirect": "/home"})
+
+        if user_dict['action'] == 'delete':
+            print("dentro delete")
+            user = User.query.filter_by(email=user_dict["email"]).first()
+            db.session.delete(user)
+            db.session.commit()
+            flash(f'User {user.email} Removed!', 'success')
+            return jsonify({"redirect": '/home'})
+
+        if user_dict['action'] == 'submit':
+            print("dentro submit")
+            try:
+                validate_user(user_dict)
+            except FormValidation as err:
+                return jsonify(error=err.error, target=err.target)
+            else:
+                role_admin = Role.query.filter_by(name='admin').first()
+                role_mod = Role.query.filter_by(name='moderatore').first()
+
+                hashed_psw = bcrypt.generate_password_hash(user_dict["password"]).decode('utf-8')
+                user = User(email=user_dict["email"], password=hashed_psw)
+
+                if user_dict["admin"]:
+                    if not role_admin:
+                        role_admin = Role(name='admin', description='admin')
+
+                    user.roles.append(role_admin)
+
+                if user_dict["moderatore"]:
+                    if not role_mod:
+                        role_mod = Role(name='moderatore', description='moderatore')
+
+                    user.roles.append(role_mod)
+
+                db.session.add(user)
+                db.session.commit()
+                flash(f'User {user.email} added', 'success')
+                return jsonify({"redirect": "/home"})
+
+    if request.method == "GET":
+        print("GET method requested")
+        id = request.args.get('id')
+        return render_template('register.html', title='Register', user_id=id)
 
 
 @register.route('/student', methods=['POST', 'GET'])
@@ -147,7 +254,7 @@ def student():
             print(id_list)
             print(student_dict.get('id'))
             if int(student_dict.get('id')) in id_list:
-                print("trovato id per studnete")
+                print("trovato id per studente")
                 student = Student.query.filter_by(id=student_dict['id']).first()
                 print(f"studente da cancellare: {student}")
                 db.session.delete(student)
@@ -158,9 +265,7 @@ def student():
     if request.method == "GET":
         print("GET method")
         id = request.args.get('id')
-        student = Student.query.filter(Student.id == id).first()
-
-        return render_template('insert_student.html', title='Register', student=student, student_id=id)
+        return render_template('insert_student.html', title='Register', student_id=id)
 
 
 @register.route("/getdata/<int:id>", methods=['GET'])
@@ -185,6 +290,24 @@ def getdata(id):
             print(f"ricevuto id: {id}")
             print(f"student json: {student_dict}")
         return jsonify(studente=student_dict, lista_id=id_list)
+
+
+@register.route("user/getdata/<int:id>", methods=['GET'])
+@roles_accepted('admin', 'moderatore')
+def getdata_user(id):
+        print("ricevuta richiesta di dati utente (user/getdata)")
+        if request.method == "GET":
+            user = User.query.filter_by(id=id).first()
+            ruoli = [str(ruolo) for ruolo in user.roles]
+            print(type(ruoli))
+            if id:
+                user_dict = {
+                    "email": user.email,
+                    "ruolo": ruoli
+                }
+
+                print(f"user json: {user_dict}")
+            return jsonify(user=user_dict)
 
 
 @register.route('/update_insert', methods=['POST'])

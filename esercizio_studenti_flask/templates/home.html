@@ -64,7 +64,7 @@
 
             {% for user in users %}
                 <tr>
-                    <th><a href="{{ url_for('edit.user', user_id = user.id) }}">{{ user.id }}</a></th>
+                    <th><a href="{{ url_for('register.admin', id = user.id) }}">{{ user.id }}</a></th>
                     <td> {{ user.email }}</td>
                     <td> {{ user.roles }}</td>
                 </tr>
