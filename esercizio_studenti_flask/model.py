@@ -16,7 +16,15 @@ class Student(db.Model):
     email = db.Column(db.String, unique=True)
 
     def __repr__(self):
-        return f'Student(id={self.id}, fullname={self.name} {self.lastname}, age={self.age}, email={self.email}'
+        return f'id={self.id}, fullname={self.name} {self.lastname}, age={self.age}, email={self.email}'
+
+    def as_dict(self):
+        return {
+                'name': self.name,
+                'lastname': self.lastname,
+                'age': self.age,
+                'email': self.email
+                }
 
 
 # Define models
@@ -36,6 +44,9 @@ class Role(db.Model, RoleMixin):
     def __str__(self):
         return f'{self.name}'
 
+    def as_dict(self):
+        return {'name': self.name, 'description': self.description}
+
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -47,4 +58,17 @@ class User(db.Model, UserMixin):
                             backref=db.backref('users', lazy='dynamic'))
 
     def __repr__(self):
-        return f'User(id={self.id}, email={self.email}'
+        return f'User(id={self.id}, email={self.email}, ruolo=({self.roles}))'
+
+    def as_dict(self):
+        ruoli = [str(ruolo) for ruolo in self.roles]
+
+        return {
+                'email': self.email,
+                'password': self.password,
+                'active': self.active,
+                'confirmed_at': self.confirmed_at,
+                'ruoli': ruoli
+                }
+
+

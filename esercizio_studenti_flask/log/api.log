@@ -1,0 +1,244 @@
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:29:50] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail.com', 'id': 10, 'lastname': 'Bianchi', 'name': 'Andrea'}
+INFO:root:Regex Valid Email
+INFO:root:student by mail id=44, fullname=Andrea Bianchi, age=25, email=Andrea.Bianchi2@gmail.com
+INFO:root:student by id id=10, fullname=Andrea Bianchi, age=25, email=Andrea.Bianchi@gmail.com
+ERROR:root:Email in uso da un altro studente
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:29:50] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:30:59] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com'}
+ERROR:esercizio_studenti_flask:Exception on /api/student/ [POST]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 116, in post_student
+    validate(student_dict)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 42, in validate
+    if student_dict['name'] and student_dict['lastname'] and student_dict['age'] and student_dict['email']:
+KeyError: 'name'
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:30:59] "[35m[1mPOST /api/student/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:32:51] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com'}
+ERROR:root:Campo vuoto
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:32:51] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:33:31] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com'}
+ERROR:root:Campo vuoto
+ERROR:esercizio_studenti_flask:Exception on /api/student/ [POST]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 117, in post_student
+    validate(student_dict)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 55, in validate
+    for key in s1:
+TypeError: 'Student' object is not iterable
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:33:31] "[35m[1mPOST /api/student/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:33:33] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com'}
+ERROR:root:Campo vuoto
+ERROR:esercizio_studenti_flask:Exception on /api/student/ [POST]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 117, in post_student
+    validate(student_dict)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 55, in validate
+    for key in s1:
+TypeError: 'Student' object is not iterable
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:33:33] "[35m[1mPOST /api/student/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:33:49] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com'}
+ERROR:root:Campo vuoto
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:33:49] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:34:05] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com', 'id': 999}
+ERROR:root:Campo vuoto
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:34:05] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:34:31] "[32mPOST /api/user HTTP/1.1[0m" 308 -
+INFO:root:post request
+INFO:root:{'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com', 'id': 999}
+ERROR:root:Campo vuoto
+ERROR:root:['password', 'active', 'confirmed_at', 'ruoli']
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:34:31] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:38:04] "[32mPOST /api/user HTTP/1.1[0m" 308 -
+INFO:root:post request
+INFO:root:{'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com'}
+ERROR:root:Campo vuoto
+ERROR:root:['id', 'password', 'active', 'confirmed_at', 'ruoli']
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:38:04] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:38:50] "[32mPOST /api/user HTTP/1.1[0m" 308 -
+INFO:root:post request
+INFO:root:{'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com'}
+ERROR:root:Campo vuoto
+ERROR:root:['password', 'active', 'confirmed_at', 'ruoli']
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:38:50] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:38:56] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com'}
+ERROR:root:Campo vuoto
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:38:56] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:39:20] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com', 'name': 'Andrea', 'lastname': 'Mancini'}
+ERROR:esercizio_studenti_flask:Exception on /api/student/ [POST]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 115, in post_student
+    validate(student_dict)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 41, in validate
+    validate_email(id)
+TypeError: validate_email() takes 0 positional arguments but 1 was given
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:39:20] "[35m[1mPOST /api/student/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:39:43] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com', 'name': 'Andrea', 'lastname': 'Mancini'}
+INFO:root:Regex Valid Email
+INFO:root:student by mail None
+INFO:root:validato
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:39:43] "[37mPOST /api/student/ HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:39:48] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': 25, 'email': 'Andrea.Bianchi2@gmail1.com', 'name': 'Andrea', 'lastname': 'Mancini'}
+INFO:root:Regex Valid Email
+INFO:root:student by mail id=45, fullname=Andrea Mancini, age=25, email=Andrea.Bianchi2@gmail1.com
+ERROR:root:Email in uso da un altro studente
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:39:48] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:root:ricevuta richiesta di dati (getdata)
+INFO:root:ricevuto id: 12
+ERROR:root:id non associato a nessuno studente
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:40:16] "[33mGET /api/student/12 HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 3
+INFO:root:{'email': 'mod@mod.com', 'ruoli': ['moderatore', 'prova']}
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:52:55] "[31m[1mPUT /api/user/3 HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 3
+INFO:root:{'email': 'mod@mod.com', 'ruoli': ['moderatore', 'prova']}
+ERROR:root:Ruolo prova non valido. Ruoli validi ['moderatore', 'admin']
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:57:18] "[31m[1mPUT /api/user/3 HTTP/1.1[0m" 400 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 3
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:57:32] "[31m[1mPUT /api/user/3 HTTP/1.1[0m" 400 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 3
+INFO:root:{'email': 'mod@mod.com', 'ruoli': True}
+ERROR:root:Campo ruoli non valido
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:57:39] "[31m[1mPUT /api/user/3 HTTP/1.1[0m" 400 -
+INFO:root:ricevuta richiesta di cancellazione (student)
+INFO:root:ricevuto id: 222
+ERROR:root:id non associato a nessuno studente
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 10:58:07] "[33mDELETE /api/student/222 HTTP/1.1[0m" 404 -
+INFO:root:ricevuta richiesta di dati (student)
+INFO:root:ricevuto id: 12
+ERROR:root:id non associato a nessuno studente
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:02:08] "[33mGET /api/student/12 HTTP/1.1[0m" 404 -
+INFO:root:ricevuta richiesta di lista dati (students)
+INFO:root:student json: [
+ {
+  "age": 25,
+  "email": "Andrea.Bianchi@gmail.com",
+  "lastname": "Bianchi",
+  "name": "Andrea"
+ },
+ {
+  "age": 22,
+  "email": "alessandro.mancini@gmail.com",
+  "lastname": "Mancini",
+  "name": "Alessandro"
+ },
+ {
+  "age": 27,
+  "email": "Roberto.Bianchi@gmail.com",
+  "lastname": "Bianchi",
+  "name": "Roberto"
+ },
+ {
+  "age": 22,
+  "email": "Simone.Rossi@gmail.com",
+  "lastname": "Rossi",
+  "name": "Simone"
+ },
+ {
+  "age": 45,
+  "email": "Marco.Marcolino@gmail.com",
+  "lastname": "Marcolino",
+  "name": "Marco"
+ },
+ {
+  "age": 51,
+  "email": "Paolo.Paolino@gmail.com",
+  "lastname": "Paolino",
+  "name": "Paolo"
+ },
+ {
+  "age": 25,
+  "email": "Andrea.Bianchi2@gmail.com",
+  "lastname": "Bianchi",
+  "name": "Andrea"
+ },
+ {
+  "age": 25,
+  "email": "Andrea.Bianchi2@gmail1.com",
+  "lastname": "Mancini",
+  "name": "Andrea"
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:02:12] "[37mGET /api/student/ HTTP/1.1[0m" 200 -
