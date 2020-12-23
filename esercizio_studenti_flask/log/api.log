@@ -242,3 +242,2025 @@ INFO:root:student json: [
  }
 ]
 INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:02:12] "[37mGET /api/student/ HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:06:20] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:06:20] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di cancellazione (student)
+INFO:root:ricevuto id: 44
+INFO:root:trovato id per studente
+INFO:root:studente da cancellare: id=44, fullname=Andrea Bianchi, age=25, email=Andrea.Bianchi2@gmail.com
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:06:39] "[37mDELETE /api/student/44 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di cancellazione (student)
+INFO:root:ricevuto id: 45
+INFO:root:trovato id per studente
+INFO:root:studente da cancellare: id=45, fullname=Andrea Mancini, age=25, email=Andrea.Bianchi2@gmail1.com
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:06:46] "[37mDELETE /api/student/45 HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:07:30] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:07:30] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:08:20] "[32mGET /register/student HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:08:20] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:08:20] "[37mGET /login?next=%2F HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:08:20] "[37mGET /static/app.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 11:08:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 15:15:10] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 15:15:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2020 15:15:29] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (students)
+INFO:root:student json: [
+ {
+  "age": 25,
+  "email": "Andrea.Bianchi@gmail.com",
+  "lastname": "Bianchi",
+  "name": "Andrea"
+ },
+ {
+  "age": 22,
+  "email": "alessandro.mancini@gmail.com",
+  "lastname": "Mancini",
+  "name": "Alessandro"
+ },
+ {
+  "age": 27,
+  "email": "Roberto.Bianchi@gmail.com",
+  "lastname": "Bianchi",
+  "name": "Roberto"
+ },
+ {
+  "age": 22,
+  "email": "Simone.Rossi@gmail.com",
+  "lastname": "Rossi",
+  "name": "Simone"
+ },
+ {
+  "age": 45,
+  "email": "Marco.Marcolino@gmail.com",
+  "lastname": "Marcolino",
+  "name": "Marco"
+ },
+ {
+  "age": 51,
+  "email": "Paolo.Paolino@gmail.com",
+  "lastname": "Paolino",
+  "name": "Paolo"
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [18/Dec/2020 09:16:13] "[37mGET /api/student/ HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (student)
+INFO:root:ricevuto id: 19
+INFO:root:student json: {'name': 'Roberto', 'lastname': 'Bianchi', 'age': 27, 'email': 'Roberto.Bianchi@gmail.com'}
+INFO:werkzeug:127.0.0.1 - - [18/Dec/2020 09:16:17] "[37mGET /api/student/19 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Dec/2020 17:03:17] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Dec/2020 17:03:17] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [18/Dec/2020 17:03:25] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2020 09:03:30] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2020 09:07:02] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2020 09:07:02] "[37mGET /login?next=%2F HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2020 09:07:02] "[37mGET /static/app.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2020 09:07:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2020 16:56:31] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2020 16:56:31] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2020 16:56:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:22] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:22] "[37mGET /static/app.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:24] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:24] "[37mGET /static/app.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:25] "[37mGET /register/student HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:25] "[36mGET /static/load_form.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:26] "[37mGET /register/admin HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:26] "[36mGET /static/register_account.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:27] "[37mGET /manage HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:29] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:29] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:29] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:36] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:37] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:04:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@admin', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['admin']}
+ERROR:root:Regex Invalid Email
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:21:34] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@admin.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['admin']}
+INFO:root:Regex Valid Email
+ERROR:esercizio_studenti_flask:Exception on /api/user/ [POST]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 571, in connect
+    **kwargs)
+  File "/usr/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 619, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 133, in post_user
+    validate_user(user_dict)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 84, in validate_user
+    validate_email()
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 63, in validate_email
+    user_bymail = User.query.filter_by(email=user_dict.get('email')).first()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3203, in __getitem__
+    return list(res)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3557, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3572, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3550, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1141, in connection
+    execution_options=execution_options,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1147, in _connection_for_bind
+    engine, execution_options
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2302, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2340, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1584, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 619, in connect
+    raise exc
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:21:40] "[35m[1mPOST /api/user/ HTTP/1.1[0m" 500 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@admin.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['admin']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:validato
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:22:09] "[37mPOST /api/user/ HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:22:18] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:22:18] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:22:21] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:22:21] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di dati (student)
+INFO:root:ricevuto id: 19
+INFO:root:student json: {'name': 'Roberto', 'lastname': 'Bianchi', 'age': 27, 'email': 'Roberto.Bianchi@gmail.com'}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:26:32] "[37mGET /api/student/19 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (student)
+INFO:root:ricevuto id: 19
+INFO:root:student json: {'name': 'Roberto', 'lastname': 'Bianchi', 'age': 27, 'email': 'Roberto.Bianchi@gmail.com'}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:27:05] "[37mGET /api/student/19 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (student)
+INFO:root:ricevuto id: 19
+INFO:root:student json: {'name': 'Roberto', 'lastname': 'Bianchi', 'age': 27, 'email': 'Roberto.Bianchi@gmail.com'}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:27:40] "[37mGET /api/student/19 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (student)
+INFO:root:ricevuto id: 19
+INFO:root:student json: {'name': 'Roberto', 'lastname': 'Bianchi', 'age': 27, 'email': 'Roberto.Bianchi@gmail.com'}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:27:50] "[37mGET /api/student/19 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:28:05] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:28:35] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:28:53] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:32:31] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:32:57] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:36:54] "[32mPOST /api/user HTTP/1.1[0m" 308 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:37:15] "[32mPOST /api/user HTTP/1.1[0m" 308 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:38:50] "[32mGET /api/user HTTP/1.1[0m" 308 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:38:50] "[37mGET /api/user/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:39:59] "[32mGET /api/user HTTP/1.1[0m" 308 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:40:12] "[32mGET /api/user HTTP/1.1[0m" 308 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:40:21] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:40:27] "[32mGET /api/user HTTP/1.1[0m" 308 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:40:30] "[37mGET /api/user/ HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:40:41] "[37mGET /api/user/ HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:40:46] "[37mGET /api/user/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:41:01] "[32mPOST /api/user HTTP/1.1[0m" 308 -
+INFO:root:post request
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:41:28] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:46:31] "[31m[1mPOSR /api/user/ HTTP/1.1[0m" 405 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@admin.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['admin']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@admin.com, ruolo=([admin]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:46:43] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@admin.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['admin']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@admin.com, ruolo=([admin]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:46:50] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@admin.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['admin']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@admin.com, ruolo=([admin]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:46:55] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@admin2.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['admin']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:validato
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:47:10] "[37mPOST /api/user/ HTTP/1.1[0m" 201 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@admin2.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['admin']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=16, email=alessandro@admin2.com, ruolo=([admin]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:47:14] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:49:31] "[32mGET /api/user HTTP/1.1[0m" 308 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:49:41] "[32mGET /api/user HTTP/1.1[0m" 308 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin2.com",
+  "password": "$2b$12$oK4E/4rzVlRXHiaTIFXQz.fJApyajVW0NzQdh3ObBRdHsWo3CLaqm",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:49:50] "[37mGET /api/user/ HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin2.com",
+  "password": "$2b$12$oK4E/4rzVlRXHiaTIFXQz.fJApyajVW0NzQdh3ObBRdHsWo3CLaqm",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:50:19] "[37mGET /api/user/ HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin2.com",
+  "password": "$2b$12$oK4E/4rzVlRXHiaTIFXQz.fJApyajVW0NzQdh3ObBRdHsWo3CLaqm",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:50:20] "[37mGET /api/user HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin2.com",
+  "password": "$2b$12$oK4E/4rzVlRXHiaTIFXQz.fJApyajVW0NzQdh3ObBRdHsWo3CLaqm",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:50:49] "[37mGET /api/user HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin2.com",
+  "password": "$2b$12$oK4E/4rzVlRXHiaTIFXQz.fJApyajVW0NzQdh3ObBRdHsWo3CLaqm",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:50:51] "[37mGET /api/user HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin2.com",
+  "password": "$2b$12$oK4E/4rzVlRXHiaTIFXQz.fJApyajVW0NzQdh3ObBRdHsWo3CLaqm",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:50:55] "[37mGET /api/user HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin2.com",
+  "password": "$2b$12$oK4E/4rzVlRXHiaTIFXQz.fJApyajVW0NzQdh3ObBRdHsWo3CLaqm",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:50:59] "[37mGET /api/user HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "id": 1,
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "id": 3,
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "id": 7,
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "id": 15,
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin2.com",
+  "id": 16,
+  "password": "$2b$12$oK4E/4rzVlRXHiaTIFXQz.fJApyajVW0NzQdh3ObBRdHsWo3CLaqm",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:51:40] "[37mGET /api/user HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "id": 1,
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "id": 3,
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "id": 7,
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "id": 15,
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin2.com",
+  "id": 16,
+  "password": "$2b$12$oK4E/4rzVlRXHiaTIFXQz.fJApyajVW0NzQdh3ObBRdHsWo3CLaqm",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:52:06] "[37mGET /api/user/ HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 15
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:52:17] "[37mGET /api/user/15 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 16
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:52:21] "[37mGET /api/user/16 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di cancellazione (user)
+INFO:root:ricevuto id: 16
+INFO:root:trovato id per utente
+INFO:root:user da cancellare: User(id=16, email=alessandro@admin2.com, ruolo=([admin]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:52:31] "[37mDELETE /api/user/16 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 16
+ERROR:root:nessun utente assocciato all'id
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:52:35] "[33mGET /api/user/16 HTTP/1.1[0m" 404 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "id": 1,
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "id": 3,
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "id": 7,
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "id": 15,
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:52:39] "[37mGET /api/user/ HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (students)
+INFO:root:student json: [
+ {
+  "age": 25,
+  "email": "Andrea.Bianchi@gmail.com",
+  "lastname": "Bianchi",
+  "name": "Andrea"
+ },
+ {
+  "age": 22,
+  "email": "alessandro.mancini@gmail.com",
+  "lastname": "Mancini",
+  "name": "Alessandro"
+ },
+ {
+  "age": 27,
+  "email": "Roberto.Bianchi@gmail.com",
+  "lastname": "Bianchi",
+  "name": "Roberto"
+ },
+ {
+  "age": 22,
+  "email": "Simone.Rossi@gmail.com",
+  "lastname": "Rossi",
+  "name": "Simone"
+ },
+ {
+  "age": 45,
+  "email": "Marco.Marcolino@gmail.com",
+  "lastname": "Marcolino",
+  "name": "Marco"
+ },
+ {
+  "age": 51,
+  "email": "Paolo.Paolino@gmail.com",
+  "lastname": "Paolino",
+  "name": "Paolo"
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:53:49] "[37mGET /api/student HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di lista dati (students)
+INFO:root:student json: [
+ {
+  "age": 25,
+  "email": "Andrea.Bianchi@gmail.com",
+  "id": 10,
+  "lastname": "Bianchi",
+  "name": "Andrea"
+ },
+ {
+  "age": 22,
+  "email": "alessandro.mancini@gmail.com",
+  "id": 11,
+  "lastname": "Mancini",
+  "name": "Alessandro"
+ },
+ {
+  "age": 27,
+  "email": "Roberto.Bianchi@gmail.com",
+  "id": 19,
+  "lastname": "Bianchi",
+  "name": "Roberto"
+ },
+ {
+  "age": 22,
+  "email": "Simone.Rossi@gmail.com",
+  "id": 40,
+  "lastname": "Rossi",
+  "name": "Simone"
+ },
+ {
+  "age": 45,
+  "email": "Marco.Marcolino@gmail.com",
+  "id": 41,
+  "lastname": "Marcolino",
+  "name": "Marco"
+ },
+ {
+  "age": 51,
+  "email": "Paolo.Paolino@gmail.com",
+  "id": 42,
+  "lastname": "Paolino",
+  "name": "Paolo"
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:54:21] "[37mGET /api/student HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:56:48] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:57:05] "[32mPOST /api/student HTTP/1.1[0m" 308 -
+INFO:root:post request student
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:57:26] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:root:post request student
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:57:36] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:root:post request student
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:58:29] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request student
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:59:31] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:root:post request student
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 10:59:35] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request student
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request student
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:02:14] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:root:post request student
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:02:36] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': '18', 'email': 'alessandro@email.it', 'name': 'alessandro', 'lastname': 'lastname'}
+INFO:root:Regex Valid Email
+INFO:root:student by mail None
+INFO:root:validato
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:02:57] "[37mPOST /api/student/ HTTP/1.1[0m" 201 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': '18', 'email': 'alessandro@email.it', 'name': 'alessandro', 'lastname': 'lastname'}
+INFO:root:Regex Valid Email
+INFO:root:student by mail id=46, fullname=alessandro lastname, age=18, email=alessandro@email.it
+ERROR:root:Email in uso da un altro studente
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:03:03] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': '18', 'email': 'alessandro@email2.it', 'name': 'alessandro', 'lastname': 'lastname'}
+INFO:root:Regex Valid Email
+INFO:root:student by mail None
+INFO:root:validato
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:03:09] "[37mPOST /api/student/ HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di dati (student)
+INFO:root:ricevuto id: 19
+INFO:root:student json: {'id': 19, 'name': 'Roberto', 'lastname': 'Bianchi', 'age': 27, 'email': 'Roberto.Bianchi@gmail.com'}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:05:26] "[37mGET /api/student/19 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (students)
+INFO:root:student json: [
+ {
+  "age": 25,
+  "email": "Andrea.Bianchi@gmail.com",
+  "id": 10,
+  "lastname": "Bianchi",
+  "name": "Andrea"
+ },
+ {
+  "age": 22,
+  "email": "alessandro.mancini@gmail.com",
+  "id": 11,
+  "lastname": "Mancini",
+  "name": "Alessandro"
+ },
+ {
+  "age": 27,
+  "email": "Roberto.Bianchi@gmail.com",
+  "id": 19,
+  "lastname": "Bianchi",
+  "name": "Roberto"
+ },
+ {
+  "age": 22,
+  "email": "Simone.Rossi@gmail.com",
+  "id": 40,
+  "lastname": "Rossi",
+  "name": "Simone"
+ },
+ {
+  "age": 45,
+  "email": "Marco.Marcolino@gmail.com",
+  "id": 41,
+  "lastname": "Marcolino",
+  "name": "Marco"
+ },
+ {
+  "age": 51,
+  "email": "Paolo.Paolino@gmail.com",
+  "id": 42,
+  "lastname": "Paolino",
+  "name": "Paolo"
+ },
+ {
+  "age": 18,
+  "email": "alessandro@email.it",
+  "id": 46,
+  "lastname": "lastname",
+  "name": "alessandro"
+ },
+ {
+  "age": 18,
+  "email": "alessandro@email2.it",
+  "id": 47,
+  "lastname": "lastname",
+  "name": "alessandro"
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:05:31] "[37mGET /api/student/ HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (students)
+INFO:root:student json: [
+ {
+  "age": 25,
+  "email": "Andrea.Bianchi@gmail.com",
+  "id": 10,
+  "lastname": "Bianchi",
+  "name": "Andrea"
+ },
+ {
+  "age": 22,
+  "email": "alessandro.mancini@gmail.com",
+  "id": 11,
+  "lastname": "Mancini",
+  "name": "Alessandro"
+ },
+ {
+  "age": 27,
+  "email": "Roberto.Bianchi@gmail.com",
+  "id": 19,
+  "lastname": "Bianchi",
+  "name": "Roberto"
+ },
+ {
+  "age": 22,
+  "email": "Simone.Rossi@gmail.com",
+  "id": 40,
+  "lastname": "Rossi",
+  "name": "Simone"
+ },
+ {
+  "age": 45,
+  "email": "Marco.Marcolino@gmail.com",
+  "id": 41,
+  "lastname": "Marcolino",
+  "name": "Marco"
+ },
+ {
+  "age": 51,
+  "email": "Paolo.Paolino@gmail.com",
+  "id": 42,
+  "lastname": "Paolino",
+  "name": "Paolo"
+ },
+ {
+  "age": 18,
+  "email": "alessandro@email.it",
+  "id": 46,
+  "lastname": "lastname",
+  "name": "alessandro"
+ },
+ {
+  "age": 18,
+  "email": "alessandro@email2.it",
+  "id": 47,
+  "lastname": "lastname",
+  "name": "alessandro"
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:05:33] "[37mGET /api/student HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di cancellazione (student)
+INFO:root:ricevuto id: 47
+INFO:root:trovato id per studente
+INFO:root:studente da cancellare: id=47, fullname=alessandro lastname, age=18, email=alessandro@email2.it
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:05:58] "[37mDELETE /api/student/47 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di lista dati (students)
+INFO:root:student json: [
+ {
+  "age": 25,
+  "email": "Andrea.Bianchi@gmail.com",
+  "id": 10,
+  "lastname": "Bianchi",
+  "name": "Andrea"
+ },
+ {
+  "age": 22,
+  "email": "alessandro.mancini@gmail.com",
+  "id": 11,
+  "lastname": "Mancini",
+  "name": "Alessandro"
+ },
+ {
+  "age": 27,
+  "email": "Roberto.Bianchi@gmail.com",
+  "id": 19,
+  "lastname": "Bianchi",
+  "name": "Roberto"
+ },
+ {
+  "age": 22,
+  "email": "Simone.Rossi@gmail.com",
+  "id": 40,
+  "lastname": "Rossi",
+  "name": "Simone"
+ },
+ {
+  "age": 45,
+  "email": "Marco.Marcolino@gmail.com",
+  "id": 41,
+  "lastname": "Marcolino",
+  "name": "Marco"
+ },
+ {
+  "age": 51,
+  "email": "Paolo.Paolino@gmail.com",
+  "id": 42,
+  "lastname": "Paolino",
+  "name": "Paolo"
+ },
+ {
+  "age": 18,
+  "email": "alessandro@email.it",
+  "id": 46,
+  "lastname": "lastname",
+  "name": "alessandro"
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:06:02] "[37mGET /api/student HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (student)
+INFO:root:ricevuto id: 46
+INFO:root:student json: {'id': 46, 'name': 'alessandro', 'lastname': 'lastname', 'age': 18, 'email': 'alessandro@email.it'}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:40:16] "[37mGET /api/student/46 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di update (student)
+INFO:root:ricevuto id: 46
+INFO:root:{'email': 'alessandro@email2.it'}
+INFO:root:Regex Valid Email
+INFO:root:student by mail None
+INFO:root:student by id id=46, fullname=alessandro lastname, age=18, email=alessandro@email.it
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:40:59] "[37mPUT /api/student/46 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (student)
+INFO:root:ricevuto id: 46
+INFO:root:{'email': 'alessandro@email1.it', 'age': '22'}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:41:27] "[31m[1mPUT /api/student/46 HTTP/1.1[0m" 400 -
+INFO:root:ricevuta richiesta di update (student)
+INFO:root:ricevuto id: 46
+INFO:root:{'email': 'alessandro@email1.it', 'age': '22'}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:41:35] "[31m[1mPUT /api/student/46 HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (student)
+INFO:root:ricevuto id: 46
+INFO:root:{'email': 'alessandro@email1.it', 'age': '22'}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:42:04] "[31m[1mPUT /api/student/46 HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (student)
+INFO:root:ricevuto id: 46
+INFO:root:{'email': 'alessandro@email1.it', 'age': 22}
+INFO:root:Regex Valid Email
+INFO:root:student by mail None
+INFO:root:student by id id=46, fullname=alessandro lastname, age=18, email=alessandro@email2.it
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:43:03] "[37mPUT /api/student/46 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (student)
+INFO:root:ricevuto id: 46
+INFO:root:{'email': 'alessandro@email.it', 'age': 22}
+INFO:root:Regex Valid Email
+INFO:root:student by mail None
+INFO:root:student by id id=46, fullname=alessandro lastname, age=22, email=alessandro@email1.it
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:43:14] "[37mPUT /api/student/46 HTTP/1.1[0m" 201 -
+INFO:root:post request student
+INFO:root:dati ricevuti: {'age': '18', 'email': 'alessandro@email.it', 'name': 'alessandro', 'lastname': 'lastname'}
+INFO:root:Regex Valid Email
+INFO:root:student by mail id=46, fullname=alessandro lastname, age=22, email=alessandro@email.it
+ERROR:root:Email in uso da un altro studente
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:52:38] "[31m[1mPOST /api/student/ HTTP/1.1[0m" 400 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "id": 1,
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "id": 3,
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "id": 7,
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "id": 15,
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:56:12] "[37mGET /api/user HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "id": 1,
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "id": 3,
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "id": 7,
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@admin.com",
+  "id": 15,
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:56:15] "[37mGET /api/user HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': 22}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:user by id User(id=15, email=alessandro@admin.com, ruolo=([admin]))
+ERROR:esercizio_studenti_flask:Exception on /api/user/15 [PUT]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_put.py", line 152, in put_user
+    if 'admin' in user_dict.get("ruoli"):
+TypeError: argument of type 'NoneType' is not iterable
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:56:43] "[35m[1mPUT /api/user/15 HTTP/1.1[0m" 500 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:user by id User(id=15, email=alessandro@admin.com, ruolo=([admin]))
+ERROR:esercizio_studenti_flask:Exception on /api/user/15 [PUT]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_put.py", line 152, in put_user
+    if 'admin' in user_dict.get("ruoli"):
+TypeError: argument of type 'NoneType' is not iterable
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:56:54] "[35m[1mPUT /api/user/15 HTTP/1.1[0m" 500 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:user by id User(id=15, email=alessandro@admin.com, ruolo=([admin]))
+ERROR:esercizio_studenti_flask:Exception on /api/user/15 [PUT]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_put.py", line 152, in put_user
+    if 'admin' in user_dict.get("ruoli"):
+TypeError: argument of type 'NoneType' is not iterable
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:57:11] "[35m[1mPUT /api/user/15 HTTP/1.1[0m" 500 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 15
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:58:27] "[37mGET /api/user/15 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:user by id User(id=15, email=alessandro@admin.com, ruolo=([admin]))
+ERROR:esercizio_studenti_flask:Exception on /api/user/15 [PUT]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_put.py", line 152, in put_user
+    if 'admin' in user_dict.get("ruoli"):
+TypeError: argument of type 'NoneType' is not iterable
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 11:58:41] "[35m[1mPUT /api/user/15 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:user by id User(id=15, email=alessandro@admin.com, ruolo=([admin]))
+ERROR:esercizio_studenti_flask:Exception on /api/user/15 [PUT]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_put.py", line 153, in put_user
+    user_dict.ruoli = []
+AttributeError: 'dict' object has no attribute 'ruoli'
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:03:38] "[35m[1mPUT /api/user/15 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:user by id User(id=15, email=alessandro@admin.com, ruolo=([admin]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:05:29] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "id": 1,
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "id": 3,
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "id": 7,
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@email.it",
+  "id": 15,
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": []
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:05:53] "[37mGET /api/user HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': ['admin']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:06:21] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': ['admin', 'moderatore']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:06:29] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': ['admin', 'moderatore', 'fake']}
+ERROR:root:Ruolo fake non valido. Ruoli validi ['moderatore', 'admin']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:06:34] "[31m[1mPUT /api/user/15 HTTP/1.1[0m" 400 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:06:43] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': ['admin', 'moderatore']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:06:52] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:07:03] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': ['admin', 'moderatore']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:10:54] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:10:57] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:11:35] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:validato
+ERROR:esercizio_studenti_flask:Exception on /api/user/ [POST]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 151, in post_user
+    if 'admin' in user_dict.get("ruoli"):
+TypeError: argument of type 'NoneType' is not iterable
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:14:47] "[35m[1mPOST /api/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+ERROR:root:Campo vuoto
+ERROR:root:['id', 'active', 'confirmed_at', 'ruoli']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:17:59] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+ERROR:root:Campo vuoto
+ERROR:root:{'ruoli'}
+ERROR:esercizio_studenti_flask:Exception on /api/user/ [POST]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 136, in post_user
+    validate_user(user_dict)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 107, in validate_user
+    raise FormValidation(error=msg, target=target_list)
+customException.FormValidation: Campo vuoto
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 138, in post_user
+    return make_response(jsonify(error=err.error, target=err.target), 400)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'set' is not JSON serializable
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:23:21] "[35m[1mPOST /api/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+ERROR:root:Campo vuoto
+ERROR:root:['ruoli']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:24:33] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+ERROR:root:Campo vuoto
+ERROR:esercizio_studenti_flask:Exception on /api/user/ [POST]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 139, in post_user
+    validate_user(user_dict)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 103, in validate_user
+    pseudo_target_list = [key for key in u1.as_dict() if not user_dict(key)]
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_post.py", line 103, in <listcomp>
+    pseudo_target_list = [key for key in u1.as_dict() if not user_dict(key)]
+TypeError: 'dict' object is not callable
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:28:54] "[35m[1mPOST /api/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+ERROR:root:Campo vuoto
+ERROR:root:['ruoli']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:29:57] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+ERROR:root:Campo vuoto
+ERROR:root:['ruoli']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:30:43] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+ERROR:root:Campo vuoto
+ERROR:root:['ruoli']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:31:55] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+ERROR:root:Campo vuoto
+ERROR:root:['ruoli']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:34:12] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin'}
+ERROR:root:Campo vuoto
+ERROR:root:['ruoli']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:36:13] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': []}
+ERROR:root:Campo vuoto
+ERROR:root:['ruoli']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:36:32] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:38:54] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': ['admin', 'moderatore']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:39:02] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:39:14] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:40:49] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:42:57] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': ['admin', 'moderatore']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:48:38] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:48:44] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:49:04] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:49:10] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:49:29] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:50:11] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:52:36] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:52:47] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': ['admin', 'moderatore']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:53:02] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:53:07] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([admin, moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:53:11] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22'}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:53:13] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 15
+INFO:root:{'email': 'alessandro@email.it', 'age': '22', 'ruoli': ['admin', 'moderatore']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:root:user by id User(id=15, email=alessandro@email.it, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:53:16] "[37mPUT /api/user/15 HTTP/1.1[0m" 201 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': []}
+ERROR:root:Campo vuoto
+ERROR:root:['ruoli']
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:54:40] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:validato
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:57:18] "[37mPOST /api/user/ HTTP/1.1[0m" 201 -
+INFO:root:post request
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:57:33] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:root:post request
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:58:30] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email22.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': {}}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 12:58:39] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email22.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:validato
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 13:00:05] "[37mPOST /api/user/ HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email222.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:validato
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 13:01:05] "[37mPOST /api/user/ HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email222.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': []}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=19, email=alessandro@email222.com, ruolo=([]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 13:01:17] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2222.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['moderatore']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail None
+INFO:root:validato
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 13:01:30] "[37mPOST /api/user/ HTTP/1.1[0m" 201 -

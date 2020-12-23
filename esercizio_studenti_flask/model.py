@@ -20,6 +20,7 @@ class Student(db.Model):
 
     def as_dict(self):
         return {
+                'id': self.id,
                 'name': self.name,
                 'lastname': self.lastname,
                 'age': self.age,
@@ -54,6 +55,7 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(255))
     active = db.Column(db.Boolean())
     confirmed_at = db.Column(db.DateTime())
+
     roles = db.relationship('Role', secondary=roles_users,
                             backref=db.backref('users', lazy='dynamic'))
 
@@ -64,6 +66,7 @@ class User(db.Model, UserMixin):
         ruoli = [str(ruolo) for ruolo in self.roles]
 
         return {
+                'id': self.id,
                 'email': self.email,
                 'password': self.password,
                 'active': self.active,

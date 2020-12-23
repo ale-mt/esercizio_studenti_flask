@@ -80,7 +80,7 @@ def validate_user(user_dict):
                     raise FormValidation(error=msg, target=['ruoli'])
 
     # nessun campo deve essere vuoto
-    if user_dict.get('email') and user_dict.get('password') and user_dict.get('confirm_password'):
+    if user_dict.get('email') and user_dict.get('password') and user_dict.get('confirm_password') and ("ruoli" in user_dict):
         validate_email()
 
         if user_dict['password'] == user_dict['confirm_password']:
@@ -94,12 +94,17 @@ def validate_user(user_dict):
     else:
         msg = "Campo vuoto"
         logging.error(msg)
-        target_list = []
         u1 = User()
-        for key in u1.as_dict():
-            if not user_dict.get(key):
-                target_list.append(key)  # lista dei campi vuoti da segnalare
 
+        # 2 modi per filtrare i campi necessari
+        # due liste + list comprehension
+        not_list = ["id", "active", "confirmed_at"]
+        target_list = [key for key in u1.as_dict() if not user_dict.get(key) and key not in not_list]
+
+        # due set + intersezione tra set A-B
+        # not_necessary_fields = {"id", "active", "confirmed_at"} # set di campi non necessari per la validazione
+        # target_list = set(target_list) # set di campi che comprende sia quelli necessari sia quelli non necessari
+        # target_list = list(target_list - not_necessary_fields) # diff set ottiene come output solo campi necessari
         logging.error(target_list)
         raise FormValidation(error=msg, target=target_list)
 
@@ -117,7 +122,7 @@ def post_student():
             return make_response(jsonify(error=err.error, target=err.target), 400)
         else:
             student = Student(name=student_dict['name'], lastname=student_dict['lastname'],
-                              age=student_dict['age'], email=student_dict['email'])
+                              age=int(student_dict['age']), email=student_dict['email'])
             db.session.add(student)
             db.session.commit()
             return make_response(jsonify({'student': student.as_dict()}), 201)

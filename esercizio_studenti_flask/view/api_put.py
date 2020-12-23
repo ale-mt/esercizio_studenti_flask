@@ -149,19 +149,23 @@ def put_user(id):
             if not role_mod:  # il record moderatore esiste gia' nella tabella dei ruoli?
                 role_mod = Role(name='moderatore', description='moderatore')
 
-            if 'admin' in user_dict.get("ruoli"):
-                if role_admin not in user.roles:
-                    user.roles.append(role_admin)
-            else:
-                if role_admin in user.roles:
-                    user.roles.remove(role_admin)
+            if "ruoli" in user_dict:
+                if type(user_dict['ruoli']) is list and len(user_dict['ruoli']) == 0: # e' stata fornita una lista vuota di ruoli
+                    user.roles = []
+                elif type(user_dict['ruoli']) is list and len(user_dict['ruoli']) > 0:
+                    if 'admin' in user_dict.get("ruoli"): # se non e' fornito array RUOLI, la variabile sara' None causando errore
+                        if role_admin not in user.roles:
+                            user.roles.append(role_admin)
+                    else:
+                        if role_admin in user.roles:
+                            user.roles.remove(role_admin)
 
-            if 'moderatore' in user_dict.get("ruoli"):
-                if role_mod not in user.roles:
-                    user.roles.append(role_mod)
-            else:
-                if role_mod in user.roles:
-                    user.roles.remove(role_mod)
+                    if 'moderatore' in user_dict.get("ruoli"):
+                        if role_mod not in user.roles:
+                            user.roles.append(role_mod)
+                    else:
+                        if role_mod in user.roles:
+                            user.roles.remove(role_mod)
 
             db.session.commit()
             return make_response(jsonify({'user': user.as_dict()}), 201)

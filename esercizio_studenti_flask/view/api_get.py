@@ -29,6 +29,7 @@ def get_student(id):
 
 
 @api_get_bp.route("student/", methods=['GET'])
+@api_get_bp.route("student", methods=['GET'])
 def get_student_list():
     logging.info("ricevuta richiesta di lista dati (students)")
     if request.method == "GET":
@@ -62,6 +63,7 @@ def get_user(id):
 
 
 @api_get_bp.route("user/", methods=['GET'])
+@api_get_bp.route("user", methods=['GET'])
 def get_user_list():
     logging.info("ricevuta richiesta di lista dati (users)")
     if request.method == "GET":
