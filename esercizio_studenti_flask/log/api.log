@@ -2264,3 +2264,458 @@ INFO:root:Regex Valid Email
 INFO:root:user by mail None
 INFO:root:validato
 INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 13:01:30] "[37mPOST /api/user/ HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:post request
+INFO:root:{'email': 'alessandro@email2222.com', 'password': 'admin', 'confirm_password': 'admin', 'ruoli': ['moderatore']}
+INFO:root:Regex Valid Email
+INFO:root:user by mail User(id=20, email=alessandro@email2222.com, ruolo=([moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:06:10] "[31m[1mPOST /api/user/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:06:32] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:06:32] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 19
+INFO:root:{'email': 'mod@mod.com', 'ruoli': True}
+ERROR:root:Campo ruoli non valido
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:01] "[31m[1mPUT /api/user/19 HTTP/1.1[0m" 400 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 19
+INFO:root:{'ruoli': ['moderatore']}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:22] "[37mPUT /api/user/19 HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:26] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:26] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 17
+INFO:root:{'ruoli': ['admin']}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:38] "[37mPUT /api/user/17 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 18
+INFO:root:{'ruoli': ['admin']}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:42] "[37mPUT /api/user/18 HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:44] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:44] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 18
+INFO:root:{'ruoli': []}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:49] "[37mPUT /api/user/18 HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:52] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:07:52] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 18
+INFO:root:{'ruoli': ['admin']}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:08:00] "[37mPUT /api/user/18 HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:08:01] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:08:01] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di update (user)
+INFO:root:ricevuto id: 18
+INFO:root:{}
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:08:09] "[37mPUT /api/user/18 HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:08:12] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:08:12] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di cancellazione (user)
+INFO:root:ricevuto id: 18
+INFO:root:trovato id per utente
+INFO:root:user da cancellare: User(id=18, email=alessandro@email22.com, ruolo=([admin]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:08:55] "[37mDELETE /api/user/18 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di cancellazione (user)
+INFO:root:ricevuto id: 19
+INFO:root:trovato id per utente
+INFO:root:user da cancellare: User(id=19, email=alessandro@email222.com, ruolo=([moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:08:57] "[37mDELETE /api/user/19 HTTP/1.1[0m" 201 -
+INFO:root:ricevuta richiesta di cancellazione (user)
+INFO:root:ricevuto id: 20
+INFO:root:trovato id per utente
+INFO:root:user da cancellare: User(id=20, email=alessandro@email2222.com, ruolo=([moderatore]))
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:00] "[37mDELETE /api/user/20 HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:02] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:02] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:root:ricevuta richiesta di cancellazione (student)
+INFO:root:ricevuto id: 46
+INFO:root:trovato id per studente
+INFO:root:studente da cancellare: id=46, fullname=alessandro lastname, age=22, email=alessandro@email.it
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:14] "[37mDELETE /api/student/46 HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:16] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:16] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:18] "[37mGET /manage HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:20] "[37mGET /register/admin HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:20] "[36mGET /static/register_account.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:20] "[37mGET /register/student HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:20] "[36mGET /static/load_form.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:21] "[37mGET /register/student HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:21] "[37mGET /register/student HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:21] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di lista dati (users)
+INFO:root:users json: [
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@admin.com",
+  "id": 1,
+  "password": "$2b$12$r.UEd6yLGIjKVkt7w4KqFO2V3FzRLiyyJhNBpRMe7LLpcJRIa7bXm",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "mod@mod.com",
+  "id": 3,
+  "password": "$2b$12$rIJTicgdpHsqAE8t2WLXjuGU8vzMNJ8StVNbIG/Ef6dkjTlvVF/Wa",
+  "ruoli": [
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "admin@moderatore.com",
+  "id": 7,
+  "password": "$2b$12$GELNqnUdLoLG4eN./xOuYuyvrCiBB4B1L8SA2m09kaI6FeJd3L50m",
+  "ruoli": [
+   "admin"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@email.it",
+  "id": 15,
+  "password": "$2b$12$eBgtdgSvsW9YnM/UYbTYD.lQdxi8kEDEOAgCs.16VGcvizDooWcvC",
+  "ruoli": [
+   "admin",
+   "moderatore"
+  ]
+ },
+ {
+  "active": null,
+  "confirmed_at": null,
+  "email": "alessandro@email2.com",
+  "id": 17,
+  "password": "$2b$12$w3A1D17Dh/IET1Hpy0AZTeQI0aj2K5D9NNe.e83JPfTss9sg8Iy9q",
+  "ruoli": [
+   "admin"
+  ]
+ }
+]
+INFO:werkzeug:127.0.0.1 - - [23/Dec/2020 14:09:27] "[37mGET /api/user/ HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+ERROR:esercizio_studenti_flask:Exception on /api/user/1 [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 571, in connect
+    **kwargs)
+  File "/usr/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 619, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_get.py", line 54, in get_user
+    user = User.query.filter_by(id=id).first()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3203, in __getitem__
+    return list(res)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3557, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3572, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3550, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1141, in connection
+    execution_options=execution_options,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1147, in _connection_for_bind
+    engine, execution_options
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2302, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2340, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1584, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 619, in connect
+    raise exc
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2020 10:04:21] "[35m[1mGET /api/user/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2020 10:04:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+ERROR:esercizio_studenti_flask:Exception on /api/user/1 [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 571, in connect
+    **kwargs)
+  File "/usr/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 619, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/PycharmProjects/flask_ajax/esercizio_studenti_flask/esercizio_studenti_flask/view/api_get.py", line 54, in get_user
+    user = User.query.filter_by(id=id).first()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3203, in __getitem__
+    return list(res)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3557, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3572, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3550, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1141, in connection
+    execution_options=execution_options,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1147, in _connection_for_bind
+    engine, execution_options
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2302, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2340, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1584, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/alessandro/PycharmProjects/esercizio_studenti_flask/venv/lib/python3.6/site-packages/pymysql/connections.py", line 619, in connect
+    raise exc
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2020 10:04:25] "[35m[1mGET /api/user/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2020 10:04:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2020 10:05:44] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:root:ricevuta richiesta di dati (user)
+INFO:root:ricevuto id: 1
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2020 10:06:03] "[37mGET /api/user/1 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2020 10:06:24] "[37mGET /static/app.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2020 10:06:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:15] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:15] "[37mGET /static/app.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:21] "[37mGET /register/student HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:21] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:21] "[36mGET /static/load_form.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:26] "[37mGET /register/admin HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:26] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:26] "[37mGET /static/register_account.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:28] "[37mGET /manage HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:28] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:30] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:30] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2021 10:08:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:05] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:06] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:07] "[37mGET /register/student HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:07] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:07] "[36mGET /static/load_form.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:08] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:08] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:07:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:11:27] "[32mGET /home HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:11:27] "[37mGET /login?next=%2Fhome HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:11:27] "[37mGET /static/app.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:11:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
