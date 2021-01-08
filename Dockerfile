@@ -12,4 +12,4 @@ EXPOSE 5000
 RUN useradd appuser && chown -R appuser /usr/src/app
 USER appuser
 
-CMD [ "python", "./run.py" ]
+CMD [ "python", "./app.py" ]
