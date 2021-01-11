@@ -2719,3 +2719,14 @@ INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:11:27] "[32mGET /home HTTP/1.1[0m"
 INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:11:27] "[37mGET /login?next=%2Fhome HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:11:27] "[37mGET /static/app.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [07/Jan/2021 09:11:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:05] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:05] "[37mGET /login?next=%2F HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:05] "[37mGET /static/app.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:12] "[32mPOST /login?next=%2F HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:12] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:12] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:14] "[37mGET /register/student HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2021 12:13:14] "[37mGET /static/load_form.js HTTP/1.1[0m" 200 -
