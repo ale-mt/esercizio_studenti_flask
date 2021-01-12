@@ -18,4 +18,9 @@ RUN echo $(whoami)
 
 RUN ls -ltr /usr/src/app
 
+RUN ls -ltr /usr/src/app/esercizio_studenti_flask
+
+RUN ls -ltr /usr/src/app/esercizio_studenti_flask/log/api.log
+
+
 CMD [ "python", "./app.py" ]
