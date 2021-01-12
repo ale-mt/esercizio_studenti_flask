@@ -1,6 +1,6 @@
 FROM python:3
 
-CMD echo $(whoami)
+RUN echo $(whoami)
   
 WORKDIR /usr/src/app
 
@@ -14,8 +14,8 @@ RUN chown -R appuser /usr/src/app
 
 USER appuser
 
-CMD echo $(whoami)
+RUN echo $(whoami)
 
-CMD ls -ltr /usr/src/app
+RUN ls -ltr /usr/src/app
 
 CMD [ "python", "./app.py" ]
