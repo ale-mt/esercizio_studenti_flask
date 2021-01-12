@@ -1,7 +1,6 @@
 FROM python:3
 
-RUN useradd appuser
-USER appuser
+CMD echo $(whoami)
   
 WORKDIR /usr/src/app
 
@@ -10,6 +9,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+RUN useradd appuser
 RUN chown -R appuser /usr/src/app
+
+USER appuser
+
+CMD echo $(whoami)
+
+CMD ls -ltr /usr/src/app
 
 CMD [ "python", "./app.py" ]
