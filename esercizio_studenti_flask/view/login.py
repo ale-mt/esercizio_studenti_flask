@@ -16,12 +16,16 @@ def login():
         email = request.form.get('email')
         pswd = request.form.get('pswd')
 
-
         logging.info(f"email={email}, psw={pswd}")
 
         user = User.query.filter_by(email=email).first()
+
+        logging.info(f"user: {user}")
+
         if user and bcrypt.check_password_hash(user.password, pswd):
             login_user(user)
+            logging.info(f"login OK")
+
             flash(f'You logged in as {user.email}!', 'success')
             next_page = request.args.get('next')
             return redirect(next_page) if next_page else redirect(url_for('home.home'))
