@@ -25,6 +25,7 @@
     <h2 class="mt-4 border-bottom">Log in your account</h2>
     <form method="post" action="" class="mt-4 mb-4">
         {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
         <div class="form-group">
             {{ form.name.label(class='form-control-label') }}
             {{ form.name(class='form-control form-control-lg') }}
