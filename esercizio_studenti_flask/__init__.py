@@ -38,8 +38,8 @@ from esercizio_studenti_flask.view.api_delete import api_delete_bp
 
 app.register_blueprint(register)
 app.register_blueprint(home_bp)
-app.register_blueprint(login_bp)
-app.register_blueprint(logout_bp)
+# app.register_blueprint(login_bp)
+# app.register_blueprint(logout_bp)
 app.register_blueprint(manage_bp)
 app.register_blueprint(api_get_bp)
 app.register_blueprint(api_post_bp)
