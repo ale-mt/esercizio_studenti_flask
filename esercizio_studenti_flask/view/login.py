@@ -1,5 +1,4 @@
 from flask import render_template, flash, redirect, url_for, request, Blueprint
-from esercizio_studenti_flask.forms import Loginform
 from esercizio_studenti_flask import bcrypt
 from flask_security import login_user
 import logging

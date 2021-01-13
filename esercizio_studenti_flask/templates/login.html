@@ -24,7 +24,7 @@
 
 {% block content %}
     <h2 class="mt-4 border-bottom">Log in your account</h2>
-{% endblock %}
+
 
     <form method="post" action="" class="mt-4 mb-4">
          <div class="form-group">
@@ -41,5 +41,6 @@
              <button type="submit" class="btn btn-primary mb-2">Sign in</button>
     </form>
 
+{% endblock %}
 
 {% block script %} <script src="{{ url_for('static', filename='login.js') }}"></script> {% endblock %}
