@@ -28,6 +28,9 @@ def login():
 
             flash(f'You logged in as {user.email}!', 'success')
             next_page = request.args.get('next')
+
+            logging.info(f"next page: {next_page}")
+
             return redirect(next_page) if next_page else redirect(url_for('home.home'))
         else:
             flash('Login failed!', 'warning')
