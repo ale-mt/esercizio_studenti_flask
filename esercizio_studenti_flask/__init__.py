@@ -11,7 +11,7 @@ import logging, os
 app = Flask(__name__)
 user = os.environ.get('MYSQL_USER')
 psw = os.environ.get('MYSQL_PASSWORD')
-host = os.environ.get('MYSQL_HOST')
+host = os.environ.get('MYSQL_SERVICE_HOST') # get it from openshift mysql pod
 db = os.environ.get('MYSQL_DATABASE')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{user}:{psw}@{host}/{db}'
@@ -27,8 +27,8 @@ logging.basicConfig(filename='./esercizio_studenti_flask/log/api.log', level=log
 
 from esercizio_studenti_flask.view.register import register
 from esercizio_studenti_flask.view.home import home_bp
-from esercizio_studenti_flask.view.login import login_bp
-from esercizio_studenti_flask.view.logout import logout_bp
+# from esercizio_studenti_flask.view.login import login_bp
+# from esercizio_studenti_flask.view.logout import logout_bp
 from esercizio_studenti_flask.view.manage import manage_bp
 from esercizio_studenti_flask.view.api_get import api_get_bp
 from esercizio_studenti_flask.view.api_post import api_post_bp

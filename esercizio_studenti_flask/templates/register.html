@@ -2,19 +2,14 @@
 
 {% block active_nav %}
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link" href=" {{ url_for('home.home') }}">Home</a></li>
-        {% if current_user.is_authenticated %}
-            <li class="nav-item"><a class="nav-link" href=" {{ url_for('register.student') }}">Insert a Student</a></li>
-            <li class="nav-item active"><a class="nav-link" href=" {{ url_for('register.admin') }}">Register an account</a></li>
-            <li class="nav-item"><a class="nav-link" href=" {{ url_for('manage.manage') }}">Advanced management</a></li>
-        {% endif %}
-    </ul>
-    <ul class="navbar-nav navbar-right">
-        {% if current_user.is_authenticated %}
-           <li class="nav-item"><a class="nav-link" href=" {{ url_for('logout.logout') }}">Logout - {{ current_user.email }} | {{ current_user.roles }} </a></li>
-                {% else %}
-            <li class="nav-item"><a class="nav-link" href=" {{ url_for('login.login') }}">Login</a></li>
-        {% endif %}
+        <li class="nav-item active">
+            <a class="nav-link" href=" {{ url_for('home.home') }}">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href=" {{ url_for('register.student') }}">Insert a Student</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href=" {{ url_for('register.admin') }}">Register an account</a></li>
+        <li class="nav-item"><a class="nav-link" href=" {{ url_for('manage.manage') }}">Advanced management</a></li>
     </ul>
 {% endblock %}
 
