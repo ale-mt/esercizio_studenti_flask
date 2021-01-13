@@ -40,8 +40,10 @@ $ docker build -t my-python-app .
 ```
 
 ```
-oc new-app https://github.com/ale-mt/esercizio_studenti_flask#openshift_deploy -e MYSQL_USER=root -e MYSQL_PASSWORD=password -e MYSQL_HOST=host -e MYSQL_DATABASE=flask_mysql -l app=studenti-python --name=studenti --image-stream=openshift/python
+oc new-app https://github.com/ale-mt/esercizio_studenti_flask#openshift_deploy -e MYSQL_USER=root -e MYSQL_PASSWORD=password -e MYSQL_SERVICE_HOST=host -e MYSQL_DATABASE=flask_mysql -l app=studenti-python --name=studenti --image-stream=openshift/python
 ```
+
+it is possible to not specify a value for ```MYSQL_SERVICE_HOST``` and let oc manage it
 
 ## Run:
 ```
