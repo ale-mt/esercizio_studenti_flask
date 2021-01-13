@@ -1,4 +1,4 @@
-$(button).click(function(){  // bottone s di submit premuto
+$("button").click(function(){  // bottone s di submit premuto
         console.log("submit");
         email = $("#emailinput").val()
         psw = $("#inputPassword").val()
