@@ -16,7 +16,8 @@ def login():
         email = request.form.get('email')
         pswd = request.form.get('pswd')
 
-        print("dentro submit")
+
+        logging.info(f"email={email}, psw={pswd}")
 
         user = User.query.filter_by(email=email).first()
         if user and bcrypt.check_password_hash(user.password, pswd):
