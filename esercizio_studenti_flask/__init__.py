@@ -9,10 +9,11 @@ from flask_security import Security, SQLAlchemyUserDatastore
 import logging, os
 
 app = Flask(__name__)
-user = os.environ.get('USER')
-psw = os.environ.get('PSW')
-host = os.environ.get('HOST')
-db = os.environ.get('DB')
+user = os.environ.get('MYSQL_USER')
+psw = os.environ.get('MYSQL_PASSWORD')
+host = os.environ.get('MYSQL_HOST')
+db = os.environ.get('MYSQL_DATABASE')
+
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{user}:{psw}@{host}/{db}'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:merlino@localhost:4000/flask_mysql'
 app.config['SECRET_KEY'] = '2e5d0b485deec8c0b7e530611f7b492a'
