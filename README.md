@@ -40,8 +40,7 @@ $ docker build -t my-python-app .
 ```
 
 ```
-oc new-app https://github.com/ale-mt/esercizio_studenti_flask#openshift_deploy -e MYSQL_HOST=mysql -e MYSQL_DATABASE=flask_mysql
- -e MYSQL_USER=root -e MYSQL_PASSWORD=**** -l app=studenti
+oc new-app https://github.com/ale-mt/esercizio_studenti_flask#openshift_deploy -e MYSQL_USER=root -e MYSQL_PASSWORD=password -e MYSQL_HOST=host -e MYSQL_DATABASE=flask_mysql -l app=studenti-python --name=studenti --image-stream=openshift/python
 ```
 
 ## Run:
@@ -49,5 +48,5 @@ oc new-app https://github.com/ale-mt/esercizio_studenti_flask#openshift_deploy -
 $ docker run -it --rm --name my-running-app my-python-app 
 ```
 ```
-oc expose svc/eserciziostudentiflask
+oc expose svc/studenti
 ```
