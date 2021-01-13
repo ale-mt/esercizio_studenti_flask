@@ -1,7 +1,7 @@
 $(button).click(function(){  // bottone s di submit premuto
         console.log("submit");
-        email = $(#emailinput).val()
-        psw = $(#inputPassword).val()
+        email = $("#emailinput").val()
+        psw = $("#inputPassword").val()
 
         req = $.ajax ({
             url: '/login',
