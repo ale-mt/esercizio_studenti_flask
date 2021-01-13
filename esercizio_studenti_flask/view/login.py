@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, request, Blueprint
+from flask import render_template, flash, redirect, url_for, request, Blueprint, jsonify
 from esercizio_studenti_flask import bcrypt
 from flask_security import login_user
 import logging
@@ -13,10 +13,8 @@ login_bp = Blueprint('login', __name__, template_folder='../templates')
 def login():
     if request.method == "POST":
         logging.info("login post request")
-        email = request.form.get('email')
-        pswd = request.form.get('pswd')
-
-        logging.info(f"email={email}, psw={pswd}")
+        email = request.get_json().get('email')
+        pswd = request.get_json().get('password')
 
         user = User.query.filter_by(email=email).first()
 
@@ -31,7 +29,7 @@ def login():
 
             logging.info(f"next page: {next_page}")
 
-            return redirect(next_page) if next_page else redirect(url_for('home.home'))
+            return jsonify({"redirect": "/home"})
         else:
             flash('Login failed!', 'warning')
 
