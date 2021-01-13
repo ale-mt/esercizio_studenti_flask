@@ -6,7 +6,7 @@ manage_bp = Blueprint('manage', __name__, template_folder='../templates')
 
 
 @manage_bp.route('/manage')
-@roles_required('admin')
+# @roles_required('admin')
 def manage():
     students = Student.query.all()
     return render_template('manage.html', title='Manage', students=students)

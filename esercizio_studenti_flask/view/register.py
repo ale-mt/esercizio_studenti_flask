@@ -100,7 +100,7 @@ def validate_user(user_dict):
 
 
 @register.route('/admin', methods=['POST', 'GET'])
-@roles_accepted('admin', 'moderatore')
+# @roles_accepted('admin', 'moderatore')
 def admin():
     if request.method == "POST":
         print("post request")
@@ -207,7 +207,7 @@ def admin():
 
 
 @register.route('/student', methods=['POST', 'GET'])
-@roles_accepted('admin', 'moderatore')
+# @roles_accepted('admin', 'moderatore')
 def student():
 
     if request.method == "POST":
@@ -269,7 +269,7 @@ def student():
 
 
 @register.route("/getdata/<int:id>", methods=['GET'])
-@roles_accepted('admin', 'moderatore')
+# @roles_accepted('admin', 'moderatore')
 def getdata(id):
     print("ricevuta richiesta di dati (getdata)")
     if request.method == "GET":
@@ -293,7 +293,7 @@ def getdata(id):
 
 
 @register.route("user/getdata/<int:id>", methods=['GET'])
-@roles_accepted('admin', 'moderatore')
+# @roles_accepted('admin', 'moderatore')
 def getdata_user(id):
         print("ricevuta richiesta di dati utente (user/getdata)")
         if request.method == "GET":

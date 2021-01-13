@@ -7,7 +7,7 @@ home_bp = Blueprint('home', __name__, template_folder='../templates')
 
 @home_bp.route('/')
 @home_bp.route('/home')
-@login_required
+# @login_required
 def home():
     students = Student.query.all()
     admins = User.query.all()
