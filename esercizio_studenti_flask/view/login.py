@@ -13,8 +13,8 @@ login_bp = Blueprint('login', __name__, template_folder='../templates')
 def login():
     if request.method == "POST":
         logging.info("login post request")
-        email = request.get_json().get('email')
-        pswd = request.get_json().get('password')
+        email = request.form.get('email')
+        pswd = request.form.get('pswd')
 
         user = User.query.filter_by(email=email).first()
 
