@@ -28,7 +28,7 @@ RUN ls -ltr /usr/src/app/esercizio_studenti_flask
 
 RUN ls -ltr /usr/src/app/esercizio_studenti_flask/log/api.log
 
-EXPOSE 5000
+EXPOSE 8080
 
 CMD [ "python", "./app.py" ]
 
