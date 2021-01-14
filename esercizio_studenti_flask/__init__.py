@@ -27,8 +27,8 @@ logging.basicConfig(filename='./esercizio_studenti_flask/log/api.log', level=log
 
 from esercizio_studenti_flask.view.register import register
 from esercizio_studenti_flask.view.home import home_bp
-# from esercizio_studenti_flask.view.login import login_bp
-# from esercizio_studenti_flask.view.logout import logout_bp
+from esercizio_studenti_flask.view.login import login_bp
+from esercizio_studenti_flask.view.logout import logout_bp
 from esercizio_studenti_flask.view.manage import manage_bp
 from esercizio_studenti_flask.view.api_get import api_get_bp
 from esercizio_studenti_flask.view.api_post import api_post_bp
@@ -38,8 +38,8 @@ from esercizio_studenti_flask.view.api_delete import api_delete_bp
 
 app.register_blueprint(register)
 app.register_blueprint(home_bp)
-# app.register_blueprint(login_bp)
-# app.register_blueprint(logout_bp)
+app.register_blueprint(login_bp)
+app.register_blueprint(logout_bp)
 app.register_blueprint(manage_bp)
 app.register_blueprint(api_get_bp)
 app.register_blueprint(api_post_bp)
