@@ -11,7 +11,12 @@ import os
 
 from flask_cors import CORS
 
-db_host = os.environ['MYSQL_HOST']
+try:
+    db_host = os.environ['MYSQL_HOST']
+except:
+    print("MYSQL_HOST env not found, using 172.17.0.4")
+    db_host = "172.17.0.4"
+    
 app = Flask(__name__)
 CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:merlino@{db_host}/flask_mysql'
