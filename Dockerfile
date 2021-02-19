@@ -1,3 +1,4 @@
+# docker run -itd --name student_api -p 5000:5000 -e MYSQL_HOST=172.17.0.5 student_api
 FROM python:3
 
 WORKDIR /usr/src/app

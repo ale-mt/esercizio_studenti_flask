@@ -7,10 +7,14 @@ from flask_sqlalchemy import SQLAlchemy
 
 from flask_security import Security, SQLAlchemyUserDatastore
 import logging
+import os
 
+from flask_cors import CORS
+
+db_host = os.environ['MYSQL_HOST']
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:merlino@172.17.0.2/flask_mysql'
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:merlino@localhost:4000/flask_mysql'
+CORS(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:merlino@{db_host}/flask_mysql'
 app.config['SECRET_KEY'] = '2e5d0b485deec8c0b7e530611f7b492a'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)

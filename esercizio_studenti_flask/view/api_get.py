@@ -21,7 +21,7 @@ def get_student(id):
         if student:
             student_dict = student.as_dict()
             logging.info(f"student json: {student_dict}")
-            return jsonify(student=student_dict)
+            return jsonify(student_dict)
 
         else:
             logging.error("id non associato a nessuno studente")
@@ -41,7 +41,7 @@ def get_student_list():
             return make_response(jsonify({'error': 'not found'}), 404)
         else:
             logging.info(f"student json: {json.dumps(student, indent=1)}")
-            return jsonify(students=student)
+            return jsonify(student)
 
 
 @api_get_bp.route("user/<int:id>", methods=['GET'])
@@ -55,7 +55,7 @@ def get_user(id):
         if user:
             user_dict = user.as_dict()
             logging.debug(f"user json: {user_dict}")
-            return jsonify(user=user_dict)
+            return jsonify(user_dict)
         else:
 
             logging.error("nessun utente assocciato all'id")
@@ -76,7 +76,7 @@ def get_user_list():
         else:
 
             logging.info(f"users json: {json.dumps(user, indent=1)}")
-            return jsonify(user=user)
+            return jsonify(user)
 
 
 @api_get_bp.route("role/<int:id>", methods=['GET'])
@@ -91,7 +91,7 @@ def get_role(id):
         if role:
             role = role.as_dict()
             logging.info(f"role json: {role}")
-            return jsonify(role=role)
+            return jsonify(role)
         else:
             logging.error("nessun ruolo assocciato all'id")
             return make_response(jsonify({'error': 'not found'}), 404)
@@ -108,6 +108,6 @@ def get_role_list():
             return make_response(jsonify({'error': 'not found'}), 404)
         else:
             logging.info(f"role json: {json.dumps(role, indent=1)}")
-            return jsonify(role=role)
+            return jsonify(role)
 
 

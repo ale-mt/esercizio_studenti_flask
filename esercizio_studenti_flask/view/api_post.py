@@ -164,3 +164,12 @@ def post_user():
             return make_response(jsonify({'user': user.as_dict()}), 201)
 
 
+@api_post_bp.route('/person', methods=["POST"])
+def post_person():
+    if request.method == "POST":
+        logging.info("post request")
+        person_dict = request.get_json()
+        print(person_dict)
+        return make_response(
+            jsonify({'person': person_dict}), 201
+        )
